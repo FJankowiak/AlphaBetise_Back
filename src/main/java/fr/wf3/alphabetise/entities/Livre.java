@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="livres")
@@ -32,6 +34,12 @@ public class Livre {
     @ManyToOne
     @JoinColumn(name="editeur_id", nullable = false)
     private Editeur editeur;
+
+    @ManyToMany
+    @JoinTable( name = "T_Livres_Auteurs_Associations",
+            joinColumns = @JoinColumn( name = "code_ean" ),
+            inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
+    private List<Auteur> auteurs = new ArrayList<>();
     //constructors
 
     //getters and setters
