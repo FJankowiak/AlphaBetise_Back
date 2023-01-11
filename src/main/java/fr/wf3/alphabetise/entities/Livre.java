@@ -1,14 +1,13 @@
 package fr.wf3.alphabetise.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name="livres")
@@ -29,7 +28,6 @@ public class Livre {
     private Date dateParution; // à voir
     private int quantite;
     private float prix;
-    private String imgURL;
 
     @ManyToOne
     @JoinColumn(name="editeur_id", nullable = false)
@@ -40,6 +38,18 @@ public class Livre {
             joinColumns = @JoinColumn( name = "code_ean" ),
             inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
     private List<Auteur> auteurs = new ArrayList<>();
+
+    @OneToMany(mappedBy = "livre")
+    private List<Image> images;
+
+    @OneToMany (mappedBy = "livre")
+    private Set<LigneCommande> ligne_commandes = new HashSet<>();
+
+    @JsonIgnore
+    public Set<LigneCommande> getLigneCommandes(){
+        return ligne_commandes;
+    }
+
     //constructors
 
     //getters and setters
