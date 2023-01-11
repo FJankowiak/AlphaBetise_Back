@@ -6,20 +6,26 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor @AllArgsConstructor
-@ToString(exclude = {})
+@ToString(exclude = {"livres"})
 @Table(name="editeurs")
 public class Editeur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_editeur")
-    private Long id; // à voir
+    private long id; // à voir
     private String nom;
 
     @OneToMany(mappedBy = "editeur")
     private List<Livre> livres;
+
+    public Editeur(String nom){
+        this.nom = nom;
+        this.livres = new ArrayList<>();
+    }
 }
