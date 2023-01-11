@@ -37,6 +37,13 @@ public class Livre {
 
     @OneToMany(mappedBy = "livre")
     private List<Note> notes = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable( name = "T_Livres_Auteurs_Associations",
+            joinColumns = @JoinColumn( name = "code_ean" ),
+            inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
+    private List<Auteur> auteurs = new ArrayList<>();
+
     //constructors
 
     //getters and setters
