@@ -13,6 +13,7 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
     @Autowired
     private EditeurContentInitialiser editeurContentInitialiser;
 
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
 //        System.err.println("Hello refresh");
