@@ -1,10 +1,9 @@
 package fr.wf3.alphabetise.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "lignes_commande")
 public class LigneCommande {
     @Embeddable
     private LigneCommandeId id = new LigneCommandeId();
