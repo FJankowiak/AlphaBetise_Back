@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Entity
@@ -19,14 +20,14 @@ public class Commande {
     @Id
     @Column(name="id_commande")
     private Long id;
-    private Date date;
+    private LocalDateTime date;
 
     @OneToMany(mappedBy = "commande")
-    private Set<LigneCommande> ligne_commandes = new HashSet<>();
+    private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
     @JsonIgnore
     public Set<LigneCommande> getLigneCommandes(){
-        return ligne_commandes;
+        return ligneCommandes;
 
 
 

@@ -43,11 +43,11 @@ public class Livre {
     private List<Image> images;
 
     @OneToMany (mappedBy = "livre")
-    private Set<LigneCommande> ligne_commandes = new HashSet<>();
+    private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
     @JsonIgnore
     public Set<LigneCommande> getLigneCommandes(){
-        return ligne_commandes;
+        return ligneCommandes;
     }
 
     //constructors
