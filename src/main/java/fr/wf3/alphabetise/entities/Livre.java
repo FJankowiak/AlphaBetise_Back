@@ -44,6 +44,17 @@ public class Livre {
             inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
     private List<Auteur> auteurs = new ArrayList<>();
 
+    @OneToMany(mappedBy = "livre")
+    private List<Image> images;
+
+    @OneToMany (mappedBy = "livre")
+    private Set<LigneCommande> ligneCommandes = new HashSet<>();
+
+    @JsonIgnore
+    public Set<LigneCommande> getLigneCommandes(){
+        return ligneCommandes;
+    }
+
     //constructors
 
     //getters and setters
