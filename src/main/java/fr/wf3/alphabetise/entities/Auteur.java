@@ -17,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Auteur {
+
     @Id
     @Column(name="id_auteur")
     private Long id;
