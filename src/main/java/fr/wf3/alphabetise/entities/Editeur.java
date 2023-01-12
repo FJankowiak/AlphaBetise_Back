@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class Editeur {
     private long id; // à voir
     private String nom;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "editeur")
     private List<Livre> livres;
 
