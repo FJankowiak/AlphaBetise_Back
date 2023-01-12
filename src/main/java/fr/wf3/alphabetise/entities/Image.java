@@ -18,10 +18,11 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_image")
     private Long id;
+    @Column(name = "img_url")
     private String imgUrl;
 
     @ManyToOne
-    @JoinColumn(name="image_id")
+    @JoinColumn(name="livre_id")
     private Livre livre;
 
 }

@@ -26,8 +26,9 @@ public class Commande {
     private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
     @JsonIgnore
-    public Set<LigneCommande> getLigneCommandes(){
+    public Set<LigneCommande> getLigneCommandes() {
         return ligneCommandes;
+    }
 
 
 

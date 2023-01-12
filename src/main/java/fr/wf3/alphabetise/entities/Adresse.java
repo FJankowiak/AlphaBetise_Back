@@ -22,6 +22,6 @@ public class Adresse {
    @Column(name = "code_postal")
     private String codePostal;
     private String ville;
-    @OneToOne
+    @OneToOne(mappedBy = "adresse")
     private User user;
 }

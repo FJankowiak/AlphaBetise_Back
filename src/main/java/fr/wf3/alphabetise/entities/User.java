@@ -22,9 +22,10 @@ public class User {
     private String email;
     private String password;
     @OneToOne
+//    @Column(name = "adresse_id")
     private Adresse adresse;
-    @ManyToOne
+//    @ManyToOne
     private Role role;
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "user")
     private List<Note> notes = new ArrayList<>();
 }

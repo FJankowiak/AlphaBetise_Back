@@ -11,8 +11,9 @@ public class LigneCommande {
     @EmbeddedId
     private LigneCommandeId id = new LigneCommandeId();
 
+    // Ne pas oublier le MapsId, et ne pas se tromper de nom
     @ManyToOne
-    @MapsId("user")
+    @MapsId("commande")
     private Commande commande;
 
     @ManyToOne

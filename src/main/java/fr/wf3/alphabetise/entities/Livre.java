@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name="livres")
@@ -29,7 +28,7 @@ public class Livre {
     private Date dateParution; // à voir
     private int quantite;
     private float prix;
-    private String imgURL;
+//    private String imgURL;
 
     @ManyToOne
     @JoinColumn(name="editeur_id", nullable = false)

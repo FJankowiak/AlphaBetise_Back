@@ -26,6 +26,12 @@ public class Auteur {
 
     @ManyToMany(mappedBy = "auteurs")
     private List<Livre> livres = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable( name = "T_auteurs_evenements",
+            joinColumns = @JoinColumn(name = "id_auteur"),
+            inverseJoinColumns = @JoinColumn(name = "id_evenement"))
+    private List<Evenement> evenements = new ArrayList<>();
 //    @JoinTable( name = "T_Livres_Auteurs_Associations",
 //            joinColumns = @JoinColumn( name = "id_auteur" ),
 //            inverseJoinColumns = @JoinColumn( name = "code_ean" ) )
