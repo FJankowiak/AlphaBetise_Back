@@ -25,10 +25,15 @@ public class Commande {
     @OneToMany(mappedBy = "commande")
     private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
+
     @JsonIgnore
     public Set<LigneCommande> getLigneCommandes() {
         return ligneCommandes;
     }
+
 
 
 

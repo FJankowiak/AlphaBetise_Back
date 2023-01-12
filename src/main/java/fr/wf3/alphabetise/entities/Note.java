@@ -1,6 +1,6 @@
 package fr.wf3.alphabetise.entities;
 
-import fr.wf3.alphabetise.embeddedClasses.NoteId;
+import fr.wf3.alphabetise.embeddedClasses.NotePK;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Note {
     // Pour inclure deux Id dans cette table, on inclut l'id dans les attributs
     @EmbeddedId
-    private NoteId id = new NoteId();
+    private NotePK id = new NotePK();
 
     @ManyToOne
     @MapsId("user")
@@ -32,7 +32,7 @@ public class Note {
 
     public Note(User user, Livre livre, float note, String avis) {
         // Créer l'id sur la base de l'id des deux éléments
-        this.id = new NoteId(user.getId(), livre.getCodeEAN());
+        this.id = new NotePK(user.getId(), livre.getCodeEAN());
         this.user = user;
         this.livre = livre;
         this.note = note;

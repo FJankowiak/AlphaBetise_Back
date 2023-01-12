@@ -1,15 +1,19 @@
 package fr.wf3.alphabetise.entities;
 
-import fr.wf3.alphabetise.embeddedClasses.LigneCommandeId;
+import fr.wf3.alphabetise.embeddedClasses.LigneCommandePK;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "lignes_commande")
+@NoArgsConstructor @Getter @Setter
 public class LigneCommande {
     // Pour inclure deux Id dans cette table, on inclut l'id dans les attributs
     @EmbeddedId
-    private LigneCommandeId id = new LigneCommandeId();
+    private LigneCommandePK id = new LigneCommandePK();
 
     // Ne pas oublier le MapsId, et ne pas se tromper de nom
     @ManyToOne
@@ -27,7 +31,7 @@ public class LigneCommande {
 
     public LigneCommande(Commande commande, Livre livre, int quantite){
         // Créer l'id sur la base de l'id des deux éléments
-        this.id = new LigneCommandeId(commande.getId(), livre.getCodeEAN());
+        this.id = new LigneCommandePK(commande.getId(), livre.getCodeEAN());
 
         this.commande = commande;
         this.livre = livre;
