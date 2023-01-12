@@ -2,7 +2,7 @@ package fr.wf3.alphabetise.repositories;
 
 
 import fr.wf3.alphabetise.entities.LigneCommande;
-import fr.wf3.alphabetise.entities.LigneCommandeId;
+import fr.wf3.alphabetise.embeddedClasses.LigneCommandeId;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

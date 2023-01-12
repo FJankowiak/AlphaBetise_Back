@@ -20,7 +20,6 @@ public class EditeurController {
 
     @GetMapping
     public ResponseEntity<List<Editeur>> getAllEditeurs(){
-        System.err.println("je suis là");
         return new ResponseEntity<>(editeurService.findAllEditeur(), HttpStatus.OK);
     }
 }

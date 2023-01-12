@@ -20,10 +20,15 @@ public class Evenement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "evenement_id")
     private long id;
+    @Column(nullable = false)
     private String titre;
+    @Column(nullable = false)
     private String descriptif;
     private LocalDateTime date;
+    // Est ce qu'il s'agit de minutes ou d'heures
+    // long ne peut pas être null
     private long duree;
+    @Column(nullable = false)
     private String lieu;
     @Column(name = "reservation")
     private boolean reservationNecessaire;
@@ -34,8 +39,8 @@ public class Evenement {
 //    @ManyToMany
 //    private List<User> users;
 
-//    @ManyToMany(mappedBy = "evenements")
-//    private List<Auteur> auteurs;
+    @ManyToMany(mappedBy = "evenements")
+    private List<Auteur> auteurs;
 
 
     public Evenement(String titre, String descriptif, LocalDateTime date, long duree, String lieu, boolean reservationNecessaire, int nbParticipants, float prix) {
@@ -49,7 +54,7 @@ public class Evenement {
         this.prix = prix;
 
 //        this.users = new ArrayList<>();
-//        this.auteurs = new ArrayList<>();
+        this.auteurs = new ArrayList<>();
     }
 
     public Evenement(String titre, String descriptif, LocalDateTime date, long duree, String lieu, boolean reservationNecessaire, int nbParticipants, float prix, List<Auteur> auteurs) {
@@ -63,6 +68,6 @@ public class Evenement {
         this.prix = prix;
 
 //        this.users = new ArrayList<>();
-//        this.auteurs = auteurs;
+        this.auteurs = auteurs;
     }
 }

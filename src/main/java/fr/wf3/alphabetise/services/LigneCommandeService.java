@@ -1,7 +1,6 @@
 package fr.wf3.alphabetise.services;
 
 import fr.wf3.alphabetise.entities.LigneCommande;
-import fr.wf3.alphabetise.entities.LigneCommandeId;
 import fr.wf3.alphabetise.repositories.LigneCommandeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
