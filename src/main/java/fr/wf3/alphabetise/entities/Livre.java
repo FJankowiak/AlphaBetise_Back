@@ -29,6 +29,9 @@ public class Livre {
     private Date dateParution; // à voir
     private int quantite;
     private float prix;
+
+    @Column(name="notes_biographiques")
+    private String notesBiographiques;
 //    private String imgURL;
 
     @ManyToOne
@@ -67,6 +70,76 @@ public class Livre {
     }
 
     //constructors
+
+    // Constructeur sans notes bio, avec ISBN
+
+    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+        this.codeEAN = codeEAN;
+        this.titre = titre;
+        this.resume = resume;
+        this.collection = collection;
+        this.dateParution = dateParution;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.editeur = editeur;
+        this.auteurs = auteurs;
+        this.images = images;
+
+        this.codeISBN = codeISBN;
+        this.notesBiographiques = "";
+    }
+    // Constructeur avec notes bio, avec ISBN
+
+    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, List<Auteur> auteurs, List<Image> images) {
+        this.codeEAN = codeEAN;
+        this.titre = titre;
+        this.resume = resume;
+        this.collection = collection;
+        this.dateParution = dateParution;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.editeur = editeur;
+        this.auteurs = auteurs;
+        this.images = images;
+
+        this.codeISBN = codeISBN;
+        this.notesBiographiques = notesBiographiques;
+    }
+    // Constructeur sans notes bio, sans ISBN
+
+    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+        this.codeEAN = codeEAN;
+        this.titre = titre;
+        this.resume = resume;
+        this.collection = collection;
+        this.dateParution = dateParution;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.editeur = editeur;
+        this.auteurs = auteurs;
+        this.images = images;
+
+        this.codeISBN = "";
+        this.notesBiographiques = "";
+    }
+
+    // Constructeur avec notes bio, sans ISBN
+    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, List<Auteur> auteurs, List<Image> images) {
+        this.codeEAN = codeEAN;
+        this.titre = titre;
+        this.resume = resume;
+        this.collection = collection;
+        this.dateParution = dateParution;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.editeur = editeur;
+        this.auteurs = auteurs;
+        this.images = images;
+
+        this.codeISBN = "";
+        this.notesBiographiques = notesBiographiques;
+    }
+
 
     //getters and setters
 

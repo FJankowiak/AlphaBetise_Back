@@ -25,4 +25,7 @@ public class Image {
     @JoinColumn(name="livre_id")
     private Livre livre;
 
+    public Image(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 }

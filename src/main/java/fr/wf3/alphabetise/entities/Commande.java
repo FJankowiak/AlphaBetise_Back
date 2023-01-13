@@ -34,7 +34,9 @@ public class Commande {
         return ligneCommandes;
     }
 
-
-
-
+    public Commande(Set<LigneCommande> ligneCommandes, User user) {
+        this.ligneCommandes = ligneCommandes;
+        this.user = user;
+        this.date = LocalDateTime.now();
+    }
 }
