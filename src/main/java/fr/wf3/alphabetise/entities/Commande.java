@@ -13,7 +13,7 @@ import java.util.*;
 @Entity
 @Table(name="commandes")
 @Data
-@ToString(exclude = {})
+@ToString(exclude = {"user"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Commande {

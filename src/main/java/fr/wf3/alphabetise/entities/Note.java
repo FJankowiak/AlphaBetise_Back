@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "notes")
 @Data @NoArgsConstructor @AllArgsConstructor
-@ToString(exclude = {"user"})
+@ToString(exclude = {"user", "livre"})
 public class Note {
     // Pour inclure deux Id dans cette table, on inclut l'id dans les attributs
     @EmbeddedId

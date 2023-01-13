@@ -3,6 +3,7 @@ package fr.wf3.alphabetise.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.Comment;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(exclude = {"users"})
 public class Evenement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -53,7 +55,7 @@ public class Evenement {
         this.nbParticipants = nbParticipants;
         this.prix = prix;
 
-//        this.users = new ArrayList<>();
+        this.users = new ArrayList<>();
         this.auteurs = new ArrayList<>();
     }
 
@@ -67,7 +69,9 @@ public class Evenement {
         this.nbParticipants = nbParticipants;
         this.prix = prix;
 
-//        this.users = new ArrayList<>();
+        this.users = new ArrayList<>();
         this.auteurs = auteurs;
     }
+
+
 }

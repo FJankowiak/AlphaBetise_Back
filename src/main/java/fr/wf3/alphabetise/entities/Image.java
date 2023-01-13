@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="images")
 @Data
-@ToString(exclude = {})
+@ToString(exclude = {"livre"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Image {

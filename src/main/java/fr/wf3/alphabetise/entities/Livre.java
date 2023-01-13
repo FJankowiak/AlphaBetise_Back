@@ -8,11 +8,12 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name="livres")
 @Data
-@ToString(exclude = {})
+@ToString(exclude = {"lignesCommande"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Livre {
@@ -52,6 +53,17 @@ public class Livre {
     @JsonIgnore
     public Set<LigneCommande> getLigneCommandes(){
         return ligneCommandes;
+    }
+
+    public Double calculerNotes(){
+        if(notes.size() == 0){
+            return null;
+        } else{
+            List<Float> values = notes.stream().map(Note::getNote).collect(Collectors.toList());
+
+            Double mean = values.stream().mapToDouble(a -> a).average().getAsDouble();
+            return mean;
+        }
     }
 
     //constructors

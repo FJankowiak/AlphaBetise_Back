@@ -4,12 +4,14 @@ import fr.wf3.alphabetise.embeddedClasses.LigneCommandePK;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "lignes_commande")
 @NoArgsConstructor @Getter @Setter
+@ToString(exclude = {"commande"})
 public class LigneCommande {
     // Pour inclure deux Id dans cette table, on inclut l'id dans les attributs
     @EmbeddedId

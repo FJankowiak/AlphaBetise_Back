@@ -13,9 +13,9 @@ import java.util.List;
 @Entity
 @Table(name="auteurs")
 @Data
-@ToString(exclude = {})
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(exclude = {"evenements"})
 public class Auteur {
 
     @Id

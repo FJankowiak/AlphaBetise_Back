@@ -42,6 +42,8 @@ public class EditeurContentInitialiser {
             editeurService.addMultipleEditeurs(missingEditeur);
         }
 
+        System.err.println(e1);
+
 
 
     }

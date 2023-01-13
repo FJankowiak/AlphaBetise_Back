@@ -3,6 +3,7 @@ package fr.wf3.alphabetise.entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "adresses")
+@ToString(exclude = "user")
 public class Adresse {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
