@@ -18,7 +18,7 @@ import java.util.*;
 public class Livre {
     @Id
     @Column(name="code_ean")
-    private String codeEAN;
+    private Long codeEAN;
     @Column(name="code_isbn")
     private String codeISBN;
     private String titre;

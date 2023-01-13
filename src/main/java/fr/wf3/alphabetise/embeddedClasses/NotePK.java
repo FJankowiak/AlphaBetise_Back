@@ -15,7 +15,7 @@ public class NotePK implements Serializable {
     // Cet Id composé de deux éléments se traduira par deux colonnes dans la table dans laquelle cet id sera "inclus" (embedded)
 
     private Long user;
-    private String livre;
+    private Long livre;
 
     // Nécessaire pour la comparaison entre Ids
     @Override
