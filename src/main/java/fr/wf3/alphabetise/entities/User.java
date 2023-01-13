@@ -32,4 +32,10 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Commande> commandes;
 
+    @ManyToMany
+    @JoinTable( name = "t_users_evenements",
+            joinColumns = @JoinColumn(name = "id_user"),
+            inverseJoinColumns = @JoinColumn(name = "id_evenement"))
+    private List<Evenement> evenements = new ArrayList<>();
+
 }

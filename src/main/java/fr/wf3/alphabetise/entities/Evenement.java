@@ -36,8 +36,8 @@ public class Evenement {
     private int nbParticipants;
     private float prix;
 
-//    @ManyToMany
-//    private List<User> users;
+    @ManyToMany(mappedBy = "evenements")
+    private List<User> users;
 
     @ManyToMany(mappedBy = "evenements")
     private List<Auteur> auteurs;
