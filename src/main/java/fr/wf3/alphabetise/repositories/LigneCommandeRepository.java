@@ -7,11 +7,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface LigneCommandeRepository extends JpaRepository<LigneCommande, LigneCommandePK> {
-    public List<LigneCommande> findByCommandeId(long id);
-
-    public List<LigneCommande> findByLivreCodeEAN(String codeEAN);
-
-    public LigneCommande findByCommandeIdAndLivreCodeEAN(long id, String codeEAN);
+public interface LigneCommandeRepository  {
+//public interface LigneCommandeRepository extends JpaRepository<LigneCommande, LigneCommandePK> {
+//    public List<LigneCommande> findByCommandeId(long id);
+//
+//    public List<LigneCommande> findByLivreCodeEAN(String codeEAN);
+//
+//    public LigneCommande findByCommandeIdAndLivreCodeEAN(long id, String codeEAN);
 
 }

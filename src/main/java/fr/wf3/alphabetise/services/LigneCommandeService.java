@@ -9,16 +9,16 @@ import java.util.List;
 
 @Service
 public class LigneCommandeService {
-    @Autowired
-    private LigneCommandeRepository ligneCommandeRepository;
-
-    public LigneCommande addLigneCommande(LigneCommande ligneCommande){
-        return ligneCommandeRepository.save(ligneCommande);
-    }
-
-    public List<LigneCommande> getAllLignesCommande(){
-        return ligneCommandeRepository.findAll();
-    }
+//    @Autowired
+//    private LigneCommandeRepository ligneCommandeRepository;
+//
+//    public LigneCommande addLigneCommande(LigneCommande ligneCommande){
+//        return ligneCommandeRepository.save(ligneCommande);
+//    }
+//
+//    public List<LigneCommande> getAllLignesCommande(){
+//        return ligneCommandeRepository.findAll();
+//    }
 
 
 }

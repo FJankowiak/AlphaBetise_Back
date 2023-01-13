@@ -21,8 +21,8 @@ public class Image {
     @Column(name = "img_url")
     private String imgUrl;
 
-    @ManyToOne
-    @JoinColumn(name="livre_id")
-    private Livre livre;
+//    @ManyToOne
+//    @JoinColumn(name="livre_id")
+//    private Livre livre;
 
 }

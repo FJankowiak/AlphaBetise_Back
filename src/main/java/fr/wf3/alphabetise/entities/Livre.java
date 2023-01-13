@@ -18,7 +18,7 @@ import java.util.*;
 public class Livre {
     @Id
     @Column(name="code_ean")
-    private String codeEAN;
+    private Long codeEAN;
     @Column(name="code_isbn")
     private String codeISBN;
     private String titre;
@@ -30,29 +30,29 @@ public class Livre {
     private float prix;
 //    private String imgURL;
 
-    @ManyToOne
-    @JoinColumn(name="editeur_id", nullable = false)
-    private Editeur editeur;
+//    @ManyToOne
+//    @JoinColumn(name="editeur_id", nullable = false)
+//    private Editeur editeur;
 
-    @OneToMany(mappedBy = "livre")
-    private List<Note> notes = new ArrayList<>();
+//    @OneToMany(mappedBy = "livre")
+//    private List<Note> notes = new ArrayList<>();
 
-    @ManyToMany
-    @JoinTable( name = "T_Livres_Auteurs_Associations",
-            joinColumns = @JoinColumn( name = "code_ean" ),
-            inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
-    private List<Auteur> auteurs = new ArrayList<>();
+//    @ManyToMany
+//    @JoinTable( name = "t_livres_auteurs_associations",
+//            joinColumns = @JoinColumn( name = "code_ean" ),
+//            inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
+//    private List<Auteur> auteurs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "livre")
-    private List<Image> images;
+//    @OneToMany(mappedBy = "livre")
+//    private List<Image> images;
 
-    @OneToMany (mappedBy = "livre")
-    private Set<LigneCommande> ligneCommandes = new HashSet<>();
+//    @OneToMany (mappedBy = "livre")
+//    private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
-    @JsonIgnore
-    public Set<LigneCommande> getLigneCommandes(){
-        return ligneCommandes;
-    }
+//    @JsonIgnore
+//    public Set<LigneCommande> getLigneCommandes(){
+//        return ligneCommandes;
+//    }
 
     //constructors
 

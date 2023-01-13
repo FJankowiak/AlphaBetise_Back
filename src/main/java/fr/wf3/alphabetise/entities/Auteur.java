@@ -25,11 +25,11 @@ public class Auteur {
     private String nom;
     private Date dateNaissance;
 
-    @ManyToMany(mappedBy = "auteurs")
-    private List<Livre> livres = new ArrayList<>();
+//    @ManyToMany(mappedBy = "auteurs")
+//    private List<Livre> livres = new ArrayList<>();
 
     @ManyToMany
-    @JoinTable( name = "T_auteurs_evenements",
+    @JoinTable( name = "t_auteurs_evenements",
             joinColumns = @JoinColumn(name = "id_auteur"),
             inverseJoinColumns = @JoinColumn(name = "id_evenement"))
     private List<Evenement> evenements = new ArrayList<>();

@@ -26,10 +26,10 @@ public class User {
     private Adresse adresse;
 //    @ManyToOne
     private Role role;
-    @OneToMany(mappedBy = "user")
-    private List<Note> notes = new ArrayList<>();
+//    @OneToMany(mappedBy = "user")
+//    private List<Note> notes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "user")
-    private List<Commande> commandes;
+//    @OneToMany(mappedBy = "user")
+//    private List<Commande> commandes;
 
 }

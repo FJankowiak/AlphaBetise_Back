@@ -23,12 +23,12 @@ public class Editeur {
     private long id; // à voir
     private String nom;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "editeur")
-    private List<Livre> livres;
+//    @JsonIgnore
+//    @OneToMany(mappedBy = "editeur")
+//    private List<Livre> livres;
 
     public Editeur(String nom){
         this.nom = nom;
-        this.livres = new ArrayList<>();
+//        this.livres = new ArrayList<>();
     }
 }
