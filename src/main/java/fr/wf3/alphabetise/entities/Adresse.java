@@ -26,4 +26,14 @@ public class Adresse {
     private String ville;
     @OneToOne(mappedBy = "adresse")
     private User user;
+
+
+    public Adresse(String adresse, String complementAdresse, String codePostal, String ville) {
+        this.adresse = adresse;
+        this.complementAdresse = complementAdresse;
+        this.codePostal = codePostal;
+        this.ville = ville;
+
+        this.user = null;
+    }
 }

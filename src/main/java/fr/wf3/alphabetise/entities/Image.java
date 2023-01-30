@@ -28,4 +28,9 @@ public class Image {
     public Image(String imgUrl) {
         this.imgUrl = imgUrl;
     }
+
+
+    public String getImgUrl() {
+        return "src\\assets\\images\\livres\\" + imgUrl;
+    }
 }

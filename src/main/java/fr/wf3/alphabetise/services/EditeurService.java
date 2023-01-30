@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class EditeurService {
+public class EditeurService implements IEditeurService {
     @Autowired
     private EditeurRepository editeurRepository;
 
