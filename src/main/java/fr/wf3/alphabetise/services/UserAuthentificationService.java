@@ -29,13 +29,13 @@ public class UserAuthentificationService implements UserDetailsService {
             throw new UsernameNotFoundException("Login/mot de passe non reconnus");
         }
 
-        Optional<User> u = userRepository.findByUsername(username);
+        User u = findByUsername(username);
+//
+//        if(!u.isPresent()){
+//            throw new UsernameNotFoundException("Login/mot de passe non reconnus");
+//        }
 
-        if(!u.isPresent()){
-            throw new UsernameNotFoundException("Login/mot de passe non reconnus");
-        }
-
-        return new MyUserDetails(u.get());
+        return new MyUserDetails(u);
     }
 
 //    @Override
