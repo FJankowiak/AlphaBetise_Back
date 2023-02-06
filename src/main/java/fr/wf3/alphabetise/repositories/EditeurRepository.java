@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
+
 public interface EditeurRepository extends JpaRepository<Editeur, Long> {
     void deleteEditeurById(Long id);
 
