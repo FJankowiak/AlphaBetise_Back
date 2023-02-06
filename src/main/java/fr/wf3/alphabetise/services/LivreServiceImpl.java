@@ -1,42 +1,52 @@
 package fr.wf3.alphabetise.services;
 
 import fr.wf3.alphabetise.dtos.LivreDTO;
+import fr.wf3.alphabetise.entities.Livre;
+import fr.wf3.alphabetise.mappers.LivreMapperImpl;
 import fr.wf3.alphabetise.repositories.LivreRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
+@AllArgsConstructor
 public class LivreServiceImpl implements LivreService {
     private  LivreRepository livreRepository;
+    private LivreMapperImpl MapperDto;
 
-    public LivreServiceImpl(LivreRepository livreRepository) {
-        this.livreRepository = livreRepository;
-    }
 
     @Override
     public List<LivreDTO> booksList() {
-        livreRepository.findAll().forEach(b->{
+        List<Livre> livres = livreRepository.findAll();
+        List<LivreDTO> livreDTOS = livres.stream()
+                .map(livre -> MapperDto.fromBook(livre))
+                .collect(Collectors.toList());
+        /*
+        List<LivreDTO> livreDTOS=new ArrayList<>();
+        for (Livre livre:livres){
+            LivreDTO livreDTO=dtoMapper.fromBook(livre);
+            livreDTOS.add(livreDTO);
+        }
+        *
+         */
+        return livreDTOS;
+    }
 
-        });
+    @Override
+    public LivreDTO getBookById(Long codeEAN) {
         return null;
     }
 
     @Override
-    public LivreDTO getBookById() {
-
+    public LivreDTO addNewBook(LivreDTO livreDTO) {
         return null;
     }
 
-    @Override
-    public LivreDTO addNewBook() {
 
-        return null;
-    }
 
     @Override
     public void deleteBook(Long codeEAN) {
@@ -44,14 +54,10 @@ public class LivreServiceImpl implements LivreService {
     }
 
     @Override
-    public LivreDTO updateBook() {
-
+    public LivreDTO updateBook(LivreDTO livreDTO) {
         return null;
     }
 
-//    @Override
-//    public List<LivreDTO> searchBooks(String keyword) {
-//
-//        return null;
-//    }
+
+
 }
