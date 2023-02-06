@@ -1,14 +1,13 @@
 package fr.wf3.alphabetise.services;
 
 import fr.wf3.alphabetise.entities.User;
+import fr.wf3.alphabetise.repositories.UserRepository;
 import fr.wf3.alphabetise.security.MyUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserAuthentificationService implements UserDetailsService {
@@ -17,14 +16,15 @@ public class UserAuthentificationService implements UserDetailsService {
     private UserRepository userRepository;
 
     private User findByUsername(String username){
-        return userRepository.findByUsername(username)
+        return userRepository.findByEmail(username)
                 .orElseThrow(() ->
                         new UsernameNotFoundException("Login/mot de passe non reconnus")
                 );
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public MyUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.err.println("dans le loadUserByUsername");
         if(username == null || username.equals("")){
             throw new UsernameNotFoundException("Login/mot de passe non reconnus");
         }

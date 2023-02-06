@@ -1,5 +1,6 @@
 package fr.wf3.alphabetise.config.jwt;
 
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +16,8 @@ public class JwtSecretKey {
         this.jwtConfig = jwtConfig;
     }
 
-//    @Bean
-//    public SecretKey secretKey(){
-//        return Keys.hmacShaKeyFor(jwtConfig.getSecretKey().getBytes());
-//    }
+    @Bean
+    public SecretKey secretKey(){
+        return Keys.hmacShaKeyFor(jwtConfig.getSecretKey().getBytes());
+    }
 }

@@ -64,4 +64,12 @@ public class User {
         this.evenements = new ArrayList<>();
     }
 
+    public boolean fullEntity(){
+        return nom != null && !nom.equals("")
+                && prenom != null && !prenom.equals("")
+                && password != null && !password.equals("")
+                && adresse.fullEntity()
+                ;
+    }
+
 }

@@ -2,9 +2,11 @@ package fr.wf3.alphabetise.config;
 
 import fr.wf3.alphabetise.config.databaseContentInitialisers.EditeurContentInitialiser;
 import fr.wf3.alphabetise.config.databaseContentInitialisers.ImageContentInitialiser;
+import fr.wf3.alphabetise.config.databaseContentInitialisers.UserContentInitialiser;
 import fr.wf3.alphabetise.entities.Auteur;
 import fr.wf3.alphabetise.entities.Editeur;
 import fr.wf3.alphabetise.entities.Image;
+import fr.wf3.alphabetise.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -21,6 +23,9 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
     @Autowired
     private ImageContentInitialiser imageContentInitialiser;
 
+    @Autowired
+    private UserContentInitialiser userContentInitialiser;
+
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
@@ -33,6 +38,8 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
         Map<String, Image> images = imageContentInitialiser.contentInitialiser();
         Map<String, Auteur> auteurs;
         Map<String, Image> livres;
+        System.err.println("avant le user content initialiser");
+        Map<String, User> users = userContentInitialiser.contentInitialiser();
 //        Map<String, Image> images;
 //        Map<String, Image> images;
 //        Map<String, Image> images;

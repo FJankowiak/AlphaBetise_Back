@@ -36,4 +36,11 @@ public class Adresse {
 
         this.user = null;
     }
+
+    public boolean fullEntity(){
+        return codePostal != null && !codePostal.equals("")
+                && adresse != null && !adresse.equals("")
+                && ville != null && !ville.equals("")
+                ;
+    }
 }
