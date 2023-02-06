@@ -16,14 +16,15 @@ import java.util.stream.Collectors;
 public class ImageContentInitialiser {
 //    @Autowired
 //    private ImageService imageService;
-//
-//
-//    public Map<String, Image> contentInitialiser(){
-//        // Obtenir tout ce qui est déjà en base
-//        List<Image> imagesInBase = imageService.findAllImages();
-////        System.err.println(imagesInBase);
-//
-//        // Future liste de tous les éléments que l'on attend dans la base
+
+    private List<Image> imagesInBase;
+
+    public Map<String, Image> contentInitialiser(){
+        // Obtenir tout ce qui est déjà en base
+//        imagesInBase = imageService.findAllImages();
+//        System.err.println(imagesInBase);
+
+        // Future liste de tous les éléments que l'on attend dans la base
 //        List<Image> imagesExpected = new ArrayList<>();
 //
 //        // Peupler la liste attendue
@@ -77,15 +78,15 @@ public class ImageContentInitialiser {
 //            imagesInBase = imageService.findAllImages();
 //        }
 //
-//        Map<String, Image> map = new HashMap<>();
+        Map<String, Image> map = new HashMap<>();
 ////
 ////        for(Image e : imagesInBase){
 ////            String[] split = e.getImgUrl().split("\\\\");
 ////            String name = split[split.length - 1];
 ////            map.put(e.getImgUrl(), e);
 ////        }
-//
-//        return map;
-////        System.err.println(e1);
-//    }
+
+        return map;
+//        System.err.println(e1);
+    }
 }

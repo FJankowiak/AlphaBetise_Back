@@ -1,6 +1,7 @@
 package fr.wf3.alphabetise.config;
 
 import fr.wf3.alphabetise.config.databaseContentInitialisers.EditeurContentInitialiser;
+import fr.wf3.alphabetise.config.databaseContentInitialisers.ImageContentInitialiser;
 import fr.wf3.alphabetise.entities.Auteur;
 import fr.wf3.alphabetise.entities.Editeur;
 import fr.wf3.alphabetise.entities.Image;
@@ -17,6 +18,8 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
 
     @Autowired
     private EditeurContentInitialiser editeurContentInitialiser;
+    @Autowired
+    private ImageContentInitialiser imageContentInitialiser;
 
 
     @Override
@@ -27,7 +30,7 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
 //        System.err.println(e1);
         Map<String, Editeur> editeurs = editeurContentInitialiser.contentInitialiser();
 
-        Map<String, Image> images;
+        Map<String, Image> images = imageContentInitialiser.contentInitialiser();
         Map<String, Auteur> auteurs;
         Map<String, Image> livres;
 //        Map<String, Image> images;

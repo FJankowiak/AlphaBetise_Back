@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface IEditeurService {
     public Editeur addEditeur(Editeur editeur);
     public Editeur updateEditeur(Editeur editeur);
-    public Optional<Editeur> findEditeurById(Long id);
+    public Editeur findEditeurById(Long id);
     public List<Editeur> findAllEditeur();
     public void deleteEditeur(Long id);
     public List<Editeur> addMultipleEditeurs(List<Editeur> editeurs);

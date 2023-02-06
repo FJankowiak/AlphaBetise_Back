@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface EvenementRepository extends JpaRepository<Evenement, Long> {
-    public List<Evenement> findByLivreCodeEAN(Long codeEAN);
+//    public List<Evenement> findByLivreCodeEAN(Long codeEAN);
 
     @Query("select e from Evenement e where e.date <= :currentDate")
     public List<Evenement> findAllByDateAfter(@Param("currentDate") LocalDateTime currentDate);
