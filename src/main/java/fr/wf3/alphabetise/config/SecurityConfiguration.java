@@ -26,7 +26,8 @@ import javax.servlet.http.HttpServletRequest;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
-    public PasswordEncoder getPasswordEncoder() {return new BCryptPasswordEncoder(10);
+    public PasswordEncoder getPasswordEncoder() {
+        return new BCryptPasswordEncoder(10);
     }
 
     private final SecretKey secretKey;
