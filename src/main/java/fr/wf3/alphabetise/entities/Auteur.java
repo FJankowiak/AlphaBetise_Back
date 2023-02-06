@@ -21,8 +21,11 @@ public class Auteur {
     @Id
     @Column(name="id_auteur")
     private Long id;
+    @Column(nullable = false)
     private String prenom;
+    @Column(nullable = false)
     private String nom;
+    private String pseudonyme;
     private Date dateNaissance;
 
     @ManyToMany(mappedBy = "auteurs")
@@ -37,4 +40,63 @@ public class Auteur {
 //            joinColumns = @JoinColumn( name = "id_auteur" ),
 //            inverseJoinColumns = @JoinColumn( name = "code_ean" ) )
 
+
+    public Auteur(String prenom, String nom, String pseudonyme, Date dateNaissance, List<Livre> livres) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = pseudonyme;
+        this.dateNaissance = dateNaissance;
+
+        this.livres = livres;
+        this.evenements = new ArrayList<>();
+    }
+
+    public Auteur(String prenom, String nom, Date dateNaissance, List<Livre> livres) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = "";
+        this.dateNaissance = dateNaissance;
+
+        this.livres = livres;
+        this.evenements = new ArrayList<>();
+    }
+
+    public Auteur(String prenom, String nom, String pseudonyme, Date dateNaissance) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = pseudonyme;
+        this.dateNaissance = dateNaissance;
+
+        this.livres = new ArrayList<>();
+        this.evenements = new ArrayList<>();
+    }
+    public Auteur(String prenom, String nom, Date dateNaissance) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = "";
+        this.dateNaissance = dateNaissance;
+
+        this.livres = new ArrayList<>();
+        this.evenements = new ArrayList<>();
+    }
+
+    public Auteur(String prenom, String nom) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = "";
+        this.dateNaissance = null;
+
+        this.livres = new ArrayList<>();
+        this.evenements = new ArrayList<>();
+    }
+
+    public Auteur(String prenom, String nom, String pseudonyme) {
+        this.prenom = prenom;
+        this.nom = nom;
+        this.pseudonyme = pseudonyme;
+        this.dateNaissance = null;
+
+        this.livres = new ArrayList<>();
+        this.evenements = new ArrayList<>();
+    }
 }

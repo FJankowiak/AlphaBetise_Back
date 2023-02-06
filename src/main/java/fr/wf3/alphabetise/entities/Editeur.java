@@ -21,6 +21,7 @@ public class Editeur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_editeur")
     private long id; // à voir
+    @Column(nullable = false, unique = true)
     private String nom;
 
     @JsonIgnore
@@ -30,5 +31,10 @@ public class Editeur {
     public Editeur(String nom){
         this.nom = nom;
         this.livres = new ArrayList<>();
+    }
+
+    @JsonIgnore
+    public boolean fullEntity(){
+        return nom != null && !nom.equals("");
     }
 }

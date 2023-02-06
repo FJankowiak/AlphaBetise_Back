@@ -1,5 +1,6 @@
 package fr.wf3.alphabetise.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,4 +26,17 @@ public class Image {
     @JoinColumn(name="livre_id")
     private Livre livre;
 
+    public Image(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+
+    public String getImgUrl() {
+        return "src\\assets\\images\\livres\\" + imgUrl;
+    }
+
+    @JsonIgnore
+    public boolean fullEntity(){
+        return imgUrl != null && !imgUrl.equals("");
+    }
 }

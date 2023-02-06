@@ -10,8 +10,8 @@ import java.util.List;
 public interface LigneCommandeRepository extends JpaRepository<LigneCommande, LigneCommandePK> {
     public List<LigneCommande> findByCommandeId(long id);
 
-    public List<LigneCommande> findByLivreCodeEAN(String codeEAN);
+    public List<LigneCommande> findByLivreCodeEAN(Long codeEAN);
 
-    public LigneCommande findByCommandeIdAndLivreCodeEAN(long id, String codeEAN);
+    public LigneCommande findByCommandeIdAndLivreCodeEAN(long id, Long codeEAN);
 
 }
