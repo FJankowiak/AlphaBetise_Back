@@ -38,7 +38,7 @@ public class DatabaseContentInitialiser implements ApplicationListener<ContextRe
 
         Map<String, Image> images = imageContentInitialiser.contentInitialiser();
         Map<String, Auteur> auteurs = auteurContentInitialiser.contentInitialiser();
-        Map<Long, Livre> livres = livreContentInitialiser.contentInitialiser(auteurs, images);
+        Map<Long, Livre> livres = livreContentInitialiser.contentInitialiser(auteurs, images, editeurs);
         System.err.println("avant le user content initialiser");
         Map<String, User> users = userContentInitialiser.contentInitialiser();
 //        Map<String, Image> images;
