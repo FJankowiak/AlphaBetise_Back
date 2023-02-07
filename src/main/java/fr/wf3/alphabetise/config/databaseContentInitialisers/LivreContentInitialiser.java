@@ -142,16 +142,29 @@ public class LivreContentInitialiser {
         livresExpected.add(creerLivre("GEANTE - ONE-SHOT - GEANTE - HISTOIRE DE CELLE QUI PARCOURUT LE MONDE A LA RECHERCHE DE LA LIBERTE",
                 9782413000167l,
                 "Elle était une fois Céleste, géante véritable, orpheline recueillie au coeur de la montagne, petite dernière d'une famille de six frères. Et quand vient le temps où chacun s'envole du cocon familial, Céleste veut elle aussi arpenter de nouveaux horizons. De la Vallée aux Marais en passant par Dorsodoro, elle découvrira l'hostilité créée par la différence, les injustices de la guerre ou de la religion mais aussi l'amour et pourquoi pas, au bout du chemin, la liberté d'être elle-même ?",
-                27.95f, Categorie.ROMANS_ADULTES, "", auteurs_names, "ailefroide.jpg", "Casterman"
+                27.95f, Categorie.ROMANS_ADULTES, "", auteurs_names, "Geante.jfif", "Editions Delcourt"
         ));
 
-//        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Deveney", "Tamarit"}));
-//
-//        livresExpected.add(creerLivre("GEANTE - ONE-SHOT - GEANTE - HISTOIRE DE CELLE QUI PARCOURUT LE MONDE A LA RECHERCHE DE LA LIBERTE",
-//                9782413000167l,
-//                "Elle était une fois Céleste, géante véritable, orpheline recueillie au coeur de la montagne, petite dernière d'une famille de six frères. Et quand vient le temps où chacun s'envole du cocon familial, Céleste veut elle aussi arpenter de nouveaux horizons. De la Vallée aux Marais en passant par Dorsodoro, elle découvrira l'hostilité créée par la différence, les injustices de la guerre ou de la religion mais aussi l'amour et pourquoi pas, au bout du chemin, la liberté d'être elle-même ?",
-//                27.95f, Categorie.ROMANS_ADULTES, "", auteurs_names, "ailefroide.jpg", "Casterman"
-//        ));
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Lambda"}));
+
+        livresExpected.add(creerLivre("LE MONDE AU BALCON - CARNET DESSINE D'UN PRINTEMPS CONFINE",
+                9782226455789l,
+                "J'ai commencé ce carnet en janvier 2020, je voulais dessiner mon quotidien avec légèreté, sans objectif précis... Qui aurait pu prévoir que ce petit projet insouciant allait se changer en journal de bord de l'événement mondial le plus inédit du 21e siècle ? Dessinatrice vedette d'instagram, Sophie Lambda est l'autrice de la remarquable bd tant pis pour l'amour, parue en 2019. Dans le monde au balcon, elle donne aux petites histoires personnelles et grandes réalités collectives un coup de crayon libérateur.",
+                18.90f, Categorie.ROMANS_ADULTES, "", auteurs_names, "LeMondeAuBalcon.jfif", "Albin Michel"
+                ));
+
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Cy"}));
+
+        livresExpected.add(creerLivre("RADIUM GIRLS",
+                9782344033449l,
+                "\"Des destins de femmes sacrifiées sur l’autel du progrès.\n" +
+                        "\n" +
+                        "New Jersey, 1918. Edna Bolz entre comme ouvrière à l’United State Radium Corporation, une usine qui fournit l’armée en montres. Aux côtés de Katherine, Mollie, Albina, Quinta et les autres, elle va apprendre le métier qui consiste à peindre des cadrans à l’aide de la peinture Undark (une substance luminescente très précieuse et très chère) à un rythme constant. Mais bien que la charge de travail soit soutenue, l’ambiance à l’usine est assez bonne. Les filles s’entendent bien et sortent même ensemble le soir. Elles se surnomment les « Ghost Girls » : par jeu, elles se peignent les ongles, les dents ou le visage afin d’éblouir (littéralement) les autres une fois la nuit tombée. Mais elles ignorent que, derrière ses propriétés étonnantes, le Radium, cette substance qu’elles manipulent toute la journée et avec laquelle elles jouent, est en réalité mortelle. Et alors que certaines d’entre elles commencent à souffrir d’anémie, de fractures voire de tumeur, des voix s’élèvent pour comprendre. D’autres, pour étouffer l’affaire...\n" +
+                        "\n" +
+                        "La dessinatrice Cy nous raconte le terrible destin des Radium Girls, ces jeunes femmes injustement sacrifiées sur l’autel du progrès technique. Un parcours de femmes dans la turbulente Amérique des années 1920 où, derrière l’insouciance lumineuse de la jeunesse, se joue une véritable tragédie des temps modernes.\"\n",
+                22.00f, Categorie.ROMANS_ADULTES, "", auteurs_names, "radiumGirls.jfif", "Glénat",
+                "Autrice de bande dessinée, Cy. est, à la base, graphiste de formation. Après plusieurs années en tant que directrice artistique, elle se lance en freelance pour développer ses projets. Elle publie aux éditions Lapin Le vrai sexe de la vraie vie (tome 1 et 2) où elle prend le parti de montrer des bribes de sexualité sur base de témoignages. Son leitmotiv ; montrer pour déculpabiliser. Sa BD suivante ne parle pas de sexualité, mais de luttes de femmes dans les années 20 aux États-Unis : Radium Girls parait chez Glénat en avril 2020. Réside en région parisienne."
+                ));
 
 
 
@@ -162,6 +175,8 @@ public class LivreContentInitialiser {
                 "Coraline vient d'emménager dans une étrange maison et, comme ses parents n'ont pas le temps de s'occuper d'elle, elle décide de jouer les exploratrices. Ouvrant une porte condamnée, elle pénètre dans un appartement identique au sien. Identique, et pourtant... Dans la droite ligne d'Alice au pays des merveilles, ce roman à l'atmosphère inoubliable a déjà conquis des millions de lecteurs. A partir de 13 ans",
                 19.90f, Categorie.ADOS, "", auteurs_names, "Coraline.jfif", "Albin Michel"
                 ));
+
+
 
 
 
