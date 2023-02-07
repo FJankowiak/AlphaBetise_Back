@@ -35,6 +35,7 @@ public class Livre {
 
     private Categorie categorie;
 
+    @Lob
     @Column(name="notes_biographiques")
     private String notesBiographiques;
 //    private String imgURL;

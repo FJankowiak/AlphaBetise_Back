@@ -33,6 +33,8 @@ public class AuteurContentInitialiser {
 //        auteursExpected.add(4 = new Auteur("Magali", "Bonniol"));
         auteursExpected.add(new Auteur("J.C.", "Deveney"));
         auteursExpected.add(new Auteur("Tania", "Tamarit"));
+        auteursExpected.add(new Auteur("Stéphanie", "Dunand-Pallaz"));
+        auteursExpected.add(new Auteur("Sophie", "Turrel"));
         auteursExpected.add(new Auteur("Neil", "Gaiman"));
         auteursExpected.add(new Auteur("Aurélie", "Neyret"));
         auteursExpected.add(new Auteur("Ryan T.", "Higgins"));
