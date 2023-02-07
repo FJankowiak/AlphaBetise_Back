@@ -18,7 +18,7 @@ public class LivreControllerAPI {
     private LivreService livreService;
 
 
-    @GetMapping//("/Livres")
+    @GetMapping("/books-list")
     public List<LivreDTO> books(){
         return livreService.booksList();
     }
