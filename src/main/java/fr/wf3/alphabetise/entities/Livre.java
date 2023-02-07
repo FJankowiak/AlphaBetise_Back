@@ -58,7 +58,7 @@ public class Livre {
         return ligneCommandes;
     }
 
-    public Double calculerNotes(){
+    public Double getMoyenne(){
         if(notes.size() == 0){
             return null;
         } else{
@@ -67,6 +67,10 @@ public class Livre {
             Double mean = values.stream().mapToDouble(a -> a).average().getAsDouble();
             return mean;
         }
+    }
+
+    public int getNbVotants(){
+        return (notes == null)? 0 : notes.size();
     }
 
     //constructors
