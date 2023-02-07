@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -34,10 +35,11 @@ public class AuteurService implements IAuteurService {
         }
     }
 
-    public Auteur findAuteurById(Long id){
-
-        return auteurRepository.findById(id).orElseThrow(() -> new MissingEntityById("Auteur", id));
+    @Override
+    public Optional<Auteur> findAuteurById(Long id) {
+        return auteurRepository.findAuteurById(id);
     }
+
 
     @Override
     public List<Auteur> findAllAuteurs() {
@@ -49,7 +51,10 @@ public class AuteurService implements IAuteurService {
     }
 
     public void deleteAuteur(Long id){
-        auteurRepository.deleteById(id);
+        Optional<Auteur> auteur = auteurRepository.findById(id);
+        if (auteur.isPresent()) {
+            auteurRepository.delete(auteur.get());
+        }
     }
 
     public List<Auteur> addMultipleAuteurs(List<Auteur> auteurs){
