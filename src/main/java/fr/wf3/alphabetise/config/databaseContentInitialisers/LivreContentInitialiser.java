@@ -40,7 +40,7 @@ public class LivreContentInitialiser {
         List<String> auteurs_names = new ArrayList<>(Arrays.asList(temp));
 
         livresExpected.add(creerLivre("L'ETONNANTE FAMILLE APPENZELL", 9791095184249l,
-                "Ma grand-mère se nommait Eugénie. Eugénie Appenzell. D'elle, je tiens mes longs cheveux bouclés et, dit-on, mon caractère bien trempé. Peu de jours avant ma naissance, grand-mère Eugénie quitta les siens. En héritage, elle me laissa une boîte remplie de photographies et de lettres. \"\"Pour que tu connaisses ta famille\"\", m'avait-elle écrit. Durant des années, j'ai démêlé les liens et les intrigues qui unissent ces personnes extraordinaires.\n" +
+                "Ma grand-mère se nommait Eugénie. Eugénie Appenzell. D'elle, je tiens mes longs cheveux bouclés et, dit-on, mon caractère bien trempé. Peu de jours avant ma naissance, grand-mère Eugénie quitta les siens. En héritage, elle me laissa une boîte remplie de photographies et de lettres. \"Pour que tu connaisses ta famille\", m'avait-elle écrit. Durant des années, j'ai démêlé les liens et les intrigues qui unissent ces personnes extraordinaires.\n" +
                         "J'ai pleuré et j'ai ri... Aujourd'hui, je vous livre leur histoire. Mon histoire. Celle de l'étonnante famille Appenzell.",
                 19.90f, Categorie.BEBES, "", auteurs_names, "etonnanteFamilleAppenzel.jfif", "Margot"
         ));
