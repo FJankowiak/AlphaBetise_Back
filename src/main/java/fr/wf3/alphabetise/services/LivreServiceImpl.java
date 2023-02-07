@@ -58,6 +58,15 @@ public class LivreServiceImpl implements LivreService {
         return null;
     }
 
+    @Override
+    public List<Livre> addMultipleLivres(List<Livre> livres) {
+        return livreRepository.saveAll(livres);
+    }
+
+    @Override
+    public List<Livre> findAllLivres() {
+        return livreRepository.findAll();
+    }
 
 
 }

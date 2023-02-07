@@ -1,5 +1,6 @@
 package fr.wf3.alphabetise.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +16,11 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = {"evenements"})
+@ToString(exclude = {"evenements", "livres"})
 public class Auteur {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_auteur")
     private Long id;
     @Column(nullable = false)
@@ -98,5 +100,12 @@ public class Auteur {
 
         this.livres = new ArrayList<>();
         this.evenements = new ArrayList<>();
+    }
+
+    @JsonIgnore
+    public boolean fullEntity(){
+        return ((this.nom != null && !this.nom.equals("")
+                && this.prenom != null && !this.prenom.equals(""))
+                || (this.pseudonyme != null && !this.pseudonyme.equals("")));
     }
 }

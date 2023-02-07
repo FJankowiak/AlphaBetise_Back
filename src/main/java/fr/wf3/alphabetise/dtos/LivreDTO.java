@@ -22,6 +22,9 @@ public class LivreDTO {
 
     private String notesBiographiques;
 
+//    private float moyenne;
+//    private float nbVotants;
+
 
 
 

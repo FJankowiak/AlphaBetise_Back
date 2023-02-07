@@ -1,12 +1,14 @@
 package fr.wf3.alphabetise.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import fr.wf3.alphabetise.enums.Categorie;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -23,6 +25,7 @@ public class Livre {
     @Column(name="code_isbn")
     private String codeISBN;
     private String titre;
+    @Lob
     private String resume;
     private String collection;
     @Column(name="date_parution")
@@ -30,6 +33,9 @@ public class Livre {
     private int quantite;
     private float prix;
 
+    private Categorie categorie;
+
+    @Lob
     @Column(name="notes_biographiques")
     private String notesBiographiques;
 //    private String imgURL;
@@ -58,7 +64,7 @@ public class Livre {
         return ligneCommandes;
     }
 
-    public Double calculerNotes(){
+    public Double getMoyenne(){
         if(notes.size() == 0){
             return null;
         } else{
@@ -67,6 +73,10 @@ public class Livre {
             Double mean = values.stream().mapToDouble(a -> a).average().getAsDouble();
             return mean;
         }
+    }
+
+    public int getNbVotants(){
+        return (notes == null)? 0 : notes.size();
     }
 
     //constructors
@@ -138,6 +148,23 @@ public class Livre {
 
         this.codeISBN = "";
         this.notesBiographiques = notesBiographiques;
+    }
+
+    public Livre(Long codeEAN, String titre, String resume, String collection, Categorie categorie, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+        this.codeEAN = codeEAN;
+        this.titre = titre;
+        this.resume = resume;
+        this.collection = collection;
+        this.categorie = categorie;
+        this.dateParution = dateParution;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.editeur = editeur;
+        this.auteurs = auteurs;
+        this.images = images;
+
+        this.codeISBN = "";
+        this.notesBiographiques = "";
     }
 
 
