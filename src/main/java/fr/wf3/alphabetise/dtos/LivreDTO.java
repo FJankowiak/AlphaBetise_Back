@@ -8,19 +8,25 @@ import java.util.Date;
 @Data
 public class LivreDTO {
 
-    private Long codeEAN;
 
-    private String codeISBN;
+
+   // private String codeISBN;
     private String titre;
-    private String resume;
-    private String collection;
-
-    private Date dateParution; // à voir
-    private int quantite;
+    private Long codeEAN;
     private float prix;
 
+    private String auteur;
+
+    private String resume;
+
+    private String categorie;
 
     private String notesBiographiques;
+
+   // private Date dateParution; // à voir
+   // private int quantite;
+
+
 
 
 
