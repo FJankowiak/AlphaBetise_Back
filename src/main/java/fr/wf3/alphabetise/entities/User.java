@@ -1,5 +1,6 @@
 package fr.wf3.alphabetise.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.wf3.alphabetise.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +23,7 @@ public class User {
     private String nom;
     private String prenom;
     private String email;
+    @JsonIgnore
     private String password;
     @OneToOne
 //    @Column(name = "adresse_id")

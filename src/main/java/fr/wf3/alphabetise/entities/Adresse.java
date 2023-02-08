@@ -1,5 +1,6 @@
 package fr.wf3.alphabetise.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,7 @@ public class Adresse {
     private String codePostal;
     private String ville;
     @OneToOne(mappedBy = "adresse")
+    @JsonIgnore
     private User user;
 
 
