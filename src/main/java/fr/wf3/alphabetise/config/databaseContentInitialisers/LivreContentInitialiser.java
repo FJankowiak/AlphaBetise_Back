@@ -166,8 +166,6 @@ public class LivreContentInitialiser {
                 "Autrice de bande dessinée, Cy. est, à la base, graphiste de formation. Après plusieurs années en tant que directrice artistique, elle se lance en freelance pour développer ses projets. Elle publie aux éditions Lapin Le vrai sexe de la vraie vie (tome 1 et 2) où elle prend le parti de montrer des bribes de sexualité sur base de témoignages. Son leitmotiv ; montrer pour déculpabiliser. Sa BD suivante ne parle pas de sexualité, mais de luttes de femmes dans les années 20 aux États-Unis : Radium Girls parait chez Glénat en avril 2020. Réside en région parisienne."
                 ));
 
-
-
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Gaiman", "Neyret"}));
 
         livresExpected.add(creerLivre("CORALINE (ED 2020 ILLUSTRE) - EDITION LUXE ILLUSTREE",
@@ -177,18 +175,44 @@ public class LivreContentInitialiser {
                 ));
 
 
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Rowling"}));
 
+        livresExpected.add(creerLivre("L'ICKABOG",
+                9782075150552l,
+                "Haut comme deux chevaux. Des boules de feu étincelantes à la place des yeux. De longues griffes acérées telles des lames. L'Ickabog arrive...La Cornucopia était un petit royaume heureux. On n'y manquait de rien, le roi portait la plus élégante des moustaches, et le pays était célèbre pour ses mets délicieux : Délice-des-Ducs ou Nacelles-de-Fées, nul ne pouvait goûter ses gâteaux divins sans pleurer de joie ! Mais dans tout le royaume, un monstre rôde : selon la légende, l'Ickabog habitait les Marécages brumeux et froids du nord du pays. On disait de cette créature qu'elle avait de formidables pouvoirs et sortait la nuit pour dévorer les moutons comme les enfants. Des histoires pour les petits et les naïfs ? Parfois, les mythes prennent vie de façon étonnante...Alors, si vous êtes courageux et voulez connaître la vérité, ouvrez ce livre, suivez deux jeunes héros déterminés et perspicaces dans une folle aventure qui changera pour toujours le sort de la Cornucopia.",
+                20.00f, Categorie.ADOS, "", auteurs_names, "Ickabog.jfif", "Gallimard Jeunesse",
+                "J.K. Rowling est l'autrice des sept livres de Harry Potter, initialement parus entre 1997 et 2007. C'est à bord d'un train en retard que l'idée de Harry Potter lui est venue pour la première fois. L'écriture de la saga s'étalera ensuite sur plusieurs années et dans plusieurs pays : l'Angleterre, le Portugal et enfin l'Ecosse.Les aventures de Harry, Ron et Hermione à Poudlard, la célèbre école de sorcellerie, se sont vendues à plus de 500 millions d'exemplaires, ont été traduites en plus de 80 langues et ont été adaptées au cinéma en huit films qui ont tous connu un vaste succès. Parallèlement, J.K. Rowling a rédigé trois brefs guides destinés à soutenir des actions caritatives : Le Quidditch à travers les âges, Les Animaux fantastiques et Les Contes de Beedle le Barde. Les Animaux fantastiques ont par la suite donné naissance à une série de films dont J.K. Rowling a signé le scénario, qui mettent en scène le magizoologiste Norbert Dragonneau. Le dernier en date, Les Animaux fantastiques : les Crimes de Grindelwald, est sorti en 2018.J.K. Rowling a aussi poursuivi l'histoire de Harry Potter adulte dans une pièce de théâtre, Harry Potter et l'enfant maudit, qu'elle a co-écrit avec le dramaturge Jack Thorne et le metteur en scène John Tiffany. La pièce a reçu un excellent accueil, que ce soit en Europe, en Amérique du Nord ou en Australie.Elle écrit également des romans pour adultes et, sous le nom de plume Robert Galbraith, a signé la série policière Les Enquêtes de Cormoran Strike, qui a été adaptée à la télévision. J.K. Rowling a reçu de nombreuses récompenses et distinctions, dont l'Ordre de l'Empire Britannique et le titre de Compagnon d'honneur, la Légion d'honneur, le prix Hans Christian Andersen, le Robert F. Kennedy Ripple of Hope Award et un Blue Peter Gold Badge. Elle soutient plusieurs causes à travers son association caritative, Volant, et a fondé l'ONG Lumos, qui se bat pour que les enfants soient élevés par leur famille, et non dans des orphelinats. D'aussi loin qu'elle s'en souvienne, elle a toujours rêvé d'être écrivaine et elle n'est jamais aussi heureuse qu'enfermée dans une pièce, en train d'inventer des histoires. Elle vit en Ecosse avec sa famille. \n" +
+                        "\n" +
+                        "Clémentine Beauvais est autrice et traductrice de nombreux livres pour la jeunesse, et enseignante-chercheuse en sciences de l'éducation à l'université de York (Royaume-Uni). Elle est la traductrice en français, entre autres, de Sarah Crossan (Inséparables, Swimming-Pool, Moon Brothers, Toffee et moi, aux éditions Rageot) et Elizabeth Acevedo (Signé Poète X), toutes deux gagnantes de la Carnegie Medal et, pour Elizabeth Acevedo du National Book Award. Elle a également traduit deux romans de Meg Rosoff. Sa traduction la plus récente est Woman World, une bande dessinée d'Aminder Dhaliwal, pour les éditions la ville brûle. Ses propres romans et albums, dont Les petites reines(Sarbacane, 2015), Songe à la douceur (Sarbacane, 2016), La louve (Alice, 2015, illustré par Antoine Déprez) ou Brexit Romance (Sarbacane, 2018) sont traduits en une quinzaine de langues et ont remporté nombre de récompenses nationales et internationales, dont le Prix Sorcières, le Prix des Incorruptibles, le Prix Libr'à Nous, et la liste White Ravens de la bibilothèque internationale de Munich. Clémentine Beauvais enseigne la littérature jeunesse, l'écriture créative et la pratique de la traduction avec les enfants dans le département de sciences de l'éducation de l'université de York, et mène dans les écoles françaises et britanniques de nombreux ateliers de traduction littéraire et d'écriture créative."
+                ));
 
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Wynne Jones"}));
 
+        livresExpected.add(creerLivre("LE CHATEAU DE HURLE",
+                9782376971290l,
+                "La trilogie arrive enfin dans son intégralité en France ! Découvrez le roman qui a inspiré le chef d'oeuvre acclamé de Miyazaki, Le Château ambulant ? ! Au coeur de la contrée magique d'Ingarie, la jeune Sophie s'est résignée à un avenir morne dans sa petite chapellerie de quartier. Mais lorsqu'elle a le malheur d'offusquer la sorcière des Steppes, celle-ci lui dérobe 60 ans de sa vie, la laissant vieille et démunie.\n" +
+                        "Cherchant désespérément un moyen de briser le sortilège, Sophie rejoindra alors l'équipe haute en couleur du grand mage Hurle. C'est au sein de son mystérieux château ambulant qu'elle se retrouvera à pactiser avec le malicieux démon de feu Calcifer. C'est une aventure extraordinaire à la recherche de sa jeunesse volée qui commence alors pour Sophie, prête à reprendre en main son destin... Autrice acclamée de littérature fantastique, Diana Wynne Jones (1934-2011) a remporté de nombreux prix, dont le Guardian Award for Children's Fiction et deux Mythopoeic Fantasy Awards.\n" +
+                        "Elle est plus connue pour ses séries Chrestomanci, L'Odyssée DaleMark et, bien entendu, pour sa trilogie du Château.",
+                14.95f, Categorie.ADOS, "", auteurs_names, "leChateauHurle.jfif", "Romans Ynnis"
+                ));
 
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Wynne Jones"}));
 
+        livresExpected.add(creerLivre("LA TRILOGIE DE HURLE - T02 - LE CHATEAU DES NUAGES, LA TRILOGIE DE HURLE 2",
+                9782376971757l,
+                "La suite tant attendue du Château de Hurle vous emmène cette fois au sud d'Ingarie, dans les mondes imaginaires des Mille et une nuits ! Loin du pays d'Ingarie, dans le sultanat du Rajpout, un jeune marchand se plaît à rêver à une vie différente. Il s'imagine ainsi fils de roi, promis depuis sa naissance à une belle princesse, bien loin de sa vie miséreuse et de son père Ingrat, bien loin de son petit étal de tapis.\n" +
+                        "Lorsqu'un beau jour, un étranger lui vend un tapis volant, la vie d'Abdallah prend un tournant pour le moins inattendu. Les péripéties s'enchaînent et le destin de notre héros semble soudain lié à celui de la superbe princesse Fleur-dans-la-Nuit. Pour la retrouver, il part pour une incroyable odyssée, semée de djinns légendaires, de sorciers, de prophéties anciennes... et d'un mystérieux château dans les nuages.",
+                14.95f, Categorie.ADOS, "", auteurs_names, "leChateauDesNuages.jfif", "Romans Ynnis"
+                ));
 
+        auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Sfar"}));
 
-
-
-
-
-
+        livresExpected.add(creerLivre("PETIT VAMPIRE",
+                9782211311021l,
+                "Tout a commencé par un film d'horreur. « Ce n'est pas de ton âge, Michel », m'avait pourtant prévenu Petit Vampire. Mais on est quand même allés voir Le Commando des morts vivants. Les zombies nazis étaient effrayants, mais comme c'était du cinéma, ça allait. Le problème, c'est que ces affreux sont revenus le soir, dans mon rêve. J'ai inventé une porte et ils sont partis, ouf ! Sauf que je ne savais pas où menait cette porte. Et puis Marguerite est arrivé pour me dire de venir vite, parce que d'horribles zombies avaient débarqué chez Petit Vampire...",
+                14.95f, Categorie.ADOS, "", auteurs_names, "leChateauDesNuages.jfif", "Delcourt",
+                "Joann Sfar, né le 28 août 1971 à Nice (France), est un auteur de bande dessinée, illustrateur, romancier et réalisateur français. Auteur de très nombreuses bandes dessinées, il est notamment connu pour ses séries Le Chat du rabbin, qu'il a ensuite adaptée au cinéma, et Donjon. Il a également illustré de nombreux ouvrages. Depuis 2010 et son film Gainsbourg, vie héroïque, il est également réalisateur. Depuis 2013, il s'est mis à l'écriture de romans, comme Le Plus Grand Philosophe de France. Joann Sfar interroge tout particulièrement les rapports qu'entretiennent entre elles les religions. Il traite de questions existentielles, identitaires et philosophiques à travers les différents supports qu'il emploie."
+                ));
 
 
 //        livresExpected.add(new Livre("Magali", "Bonniol"));
