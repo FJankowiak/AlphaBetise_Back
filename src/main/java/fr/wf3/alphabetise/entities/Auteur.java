@@ -31,9 +31,11 @@ public class Auteur {
     private Date dateNaissance;
 
     @ManyToMany(mappedBy = "auteurs")
+    @JsonIgnore
     private List<Livre> livres = new ArrayList<>();
 
     @ManyToMany
+    @JsonIgnore
     @JoinTable( name = "T_auteurs_evenements",
             joinColumns = @JoinColumn(name = "id_auteur"),
             inverseJoinColumns = @JoinColumn(name = "id_evenement"))
