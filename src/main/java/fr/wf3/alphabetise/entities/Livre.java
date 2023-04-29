@@ -8,66 +8,72 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Entity
-@Table(name="livres")
+@Table(name = "livres")
 @Data
 @ToString(exclude = {"lignesCommande"})
 @NoArgsConstructor
 @AllArgsConstructor
 public class Livre {
     @Id
-    @Column(name="code_ean")
+    @Column(name = "code_ean")
     private Long codeEAN;
-    @Column(name="code_isbn")
+    @Column(name = "code_isbn")
     private String codeISBN;
     private String titre;
     @Lob
     private String resume;
     private String collection;
-    @Column(name="date_parution")
+    @Column(name = "date_parution")
     private Date dateParution; // à voir
     private int quantite;
     private float prix;
-
+    @JsonIgnore
+    private String mainImgUrl;
     private Categorie categorie;
 
     @Lob
-    @Column(name="notes_biographiques")
+    @Column(name = "notes_biographiques")
     private String notesBiographiques;
 //    private String imgURL;
 
     @ManyToOne
-    @JoinColumn(name="editeur_id", nullable = false)
+    @JoinColumn(name = "editeur_id", nullable = false)
     private Editeur editeur;
 
     @OneToMany(mappedBy = "livre")
     private List<Note> notes = new ArrayList<>();
 
     @ManyToMany
-    @JoinTable( name = "T_Livres_Auteurs_Associations",
-            joinColumns = @JoinColumn( name = "code_ean" ),
-            inverseJoinColumns = @JoinColumn( name = "id_auteur" ) )
+    @JoinTable(name = "T_Livres_Auteurs_Associations",
+            joinColumns = @JoinColumn(name = "code_ean"),
+            inverseJoinColumns = @JoinColumn(name = "id_auteur"))
     private List<Auteur> auteurs = new ArrayList<>();
 
     @OneToMany(mappedBy = "livre")
     private List<Image> images;
 
-    @OneToMany (mappedBy = "livre")
+    @OneToMany(mappedBy = "livre")
     private Set<LigneCommande> ligneCommandes = new HashSet<>();
 
     @JsonIgnore
-    public Set<LigneCommande> getLigneCommandes(){
+    public Set<LigneCommande> getLigneCommandes() {
         return ligneCommandes;
     }
 
-    public Double getMoyenne(){
-        if(notes.size() == 0){
+
+    public String setImgUrl(String url) {
+        return "src\\assets\\images\\livres\\" + url;
+    }
+
+
+    public Double getMoyenne() {
+        if (notes.size() == 0) {
             return null;
-        } else{
+        } else {
             List<Float> values = notes.stream().map(Note::getNote).collect(Collectors.toList());
 
             Double mean = values.stream().mapToDouble(a -> a).average().getAsDouble();
@@ -75,15 +81,15 @@ public class Livre {
         }
     }
 
-    public int getNbVotants(){
-        return (notes == null)? 0 : notes.size();
+    public int getNbVotants() {
+        return (notes == null) ? 0 : notes.size();
     }
 
     //constructors
 
     // Constructeur sans notes bio, avec ISBN
 
-    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, String mainImgUrl, List<Image> images) {
         this.codeEAN = codeEAN;
         this.titre = titre;
         this.resume = resume;
@@ -93,6 +99,7 @@ public class Livre {
         this.prix = prix;
         this.editeur = editeur;
         this.auteurs = auteurs;
+        this.mainImgUrl = setImgUrl(mainImgUrl);
         this.images = images;
 
         this.codeISBN = codeISBN;
@@ -100,7 +107,7 @@ public class Livre {
     }
     // Constructeur avec notes bio, avec ISBN
 
-    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, List<Auteur> auteurs, List<Image> images) {
+    public Livre(Long codeEAN, String codeISBN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, String mainImgUrl, List<Auteur> auteurs, List<Image> images) {
         this.codeEAN = codeEAN;
         this.titre = titre;
         this.resume = resume;
@@ -111,13 +118,14 @@ public class Livre {
         this.editeur = editeur;
         this.auteurs = auteurs;
         this.images = images;
+        this.mainImgUrl = setImgUrl(mainImgUrl);
 
         this.codeISBN = codeISBN;
         this.notesBiographiques = notesBiographiques;
     }
     // Constructeur sans notes bio, sans ISBN
 
-    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String mainImgUrl, List<Auteur> auteurs, List<Image> images) {
         this.codeEAN = codeEAN;
         this.titre = titre;
         this.resume = resume;
@@ -128,13 +136,14 @@ public class Livre {
         this.editeur = editeur;
         this.auteurs = auteurs;
         this.images = images;
+        this.mainImgUrl = setImgUrl(mainImgUrl);
 
         this.codeISBN = "";
         this.notesBiographiques = "";
     }
 
     // Constructeur avec notes bio, sans ISBN
-    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, List<Auteur> auteurs, List<Image> images) {
+    public Livre(Long codeEAN, String titre, String resume, String collection, Date dateParution, int quantite, float prix, Editeur editeur, String notesBiographiques, String mainImgUrl, List<Auteur> auteurs, List<Image> images) {
         this.codeEAN = codeEAN;
         this.titre = titre;
         this.resume = resume;
@@ -145,12 +154,13 @@ public class Livre {
         this.editeur = editeur;
         this.auteurs = auteurs;
         this.images = images;
+        this.mainImgUrl = setImgUrl(mainImgUrl);
 
         this.codeISBN = "";
         this.notesBiographiques = notesBiographiques;
     }
 
-    public Livre(Long codeEAN, String titre, String resume, String collection, Categorie categorie, Date dateParution, int quantite, float prix, Editeur editeur, List<Auteur> auteurs, List<Image> images) {
+    public Livre(Long codeEAN, String titre, String resume, String collection, Categorie categorie, Date dateParution, int quantite, float prix, Editeur editeur, String mainImgUrl, List<Auteur> auteurs, List<Image> images) {
         this.codeEAN = codeEAN;
         this.titre = titre;
         this.resume = resume;
@@ -162,6 +172,7 @@ public class Livre {
         this.editeur = editeur;
         this.auteurs = auteurs;
         this.images = images;
+        this.mainImgUrl = setImgUrl(mainImgUrl);
 
         this.codeISBN = "";
         this.notesBiographiques = "";
@@ -169,7 +180,6 @@ public class Livre {
 
 
     //getters and setters
-
 
 
 }

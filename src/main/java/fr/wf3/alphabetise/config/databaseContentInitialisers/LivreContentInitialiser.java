@@ -289,7 +289,7 @@ public class LivreContentInitialiser {
         List<Auteur> auteurs1 = getFromMap(auteurs);
         List<Image> images1 = getImageFromMap(image);
         Editeur editeur = editeurs.get(editeur_name);
-        livre = new Livre(codeEan, titre, resume, collection, categorie, new Date(), 10, prix, editeur, auteurs1, images1);
+        livre = new Livre(codeEan, titre, resume, collection, categorie, new Date(), 10, prix, editeur, image, auteurs1, images1);
 
         return livre;
 

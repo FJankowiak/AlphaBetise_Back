@@ -14,6 +14,7 @@ public class LivreDTO {
     private String titre;
     private String resume;
     private String collection;
+    private String mainImgUrl;
 
     private Date dateParution; // à voir
     private int quantite;
