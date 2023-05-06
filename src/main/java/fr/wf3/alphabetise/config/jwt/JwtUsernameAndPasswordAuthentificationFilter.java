@@ -54,7 +54,7 @@ public class JwtUsernameAndPasswordAuthentificationFilter extends UsernamePasswo
                 .claim("authorities", authResult.getAuthorities())
                 .setIssuedAt(new Date())
                 .setExpiration(java.sql.Date.valueOf(LocalDate.now()
-                        .plusDays(jwtConfig.getTokenExpirationAfterDays())
+                        .plusDays(jwtConfig.getTokenExpirationAfterHours())
                 ))
                 .signWith(secretKey)
                 .compact();
