@@ -39,7 +39,7 @@ public class LivreContentInitialiser {
         String[] temp = {"Perez", "Lacombe"};
         List<String> auteurs_names = new ArrayList<>(Arrays.asList(temp));
 
-        livresExpected.add(creerLivre("L'ETONNANTE FAMILLE APPENZELL", 9791095184249l,
+        livresExpected.add(creerLivre("L'étonnante famille Appenzell", 9791095184249l,
                 "Ma grand-mère se nommait Eugénie. Eugénie Appenzell. D'elle, je tiens mes longs cheveux bouclés et, dit-on, mon caractère bien trempé. Peu de jours avant ma naissance, grand-mère Eugénie quitta les siens. En héritage, elle me laissa une boîte remplie de photographies et de lettres. \"Pour que tu connaisses ta famille\", m'avait-elle écrit. Durant des années, j'ai démêlé les liens et les intrigues qui unissent ces personnes extraordinaires.\n" +
                         "J'ai pleuré et j'ai ri... Aujourd'hui, je vous livre leur histoire. Mon histoire. Celle de l'étonnante famille Appenzell.",
                 19.90f, Categorie.BEBES, "", auteurs_names, "etonnanteFamilleAppenzel.jfif", "Margot"
@@ -47,14 +47,14 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Lang", "Lang Max"}));
 
-        livresExpected.add(creerLivre("GASTON GROGNON - T02 - C'EST LA FETE !", 9782203211506l,
+        livresExpected.add(creerLivre("Gaston Grognon - T02 - C'est la fête !", 9782203211506l,
                 "N'avez-vous jamais été un peu inquiet en allant à une fête ? c'est le cas de Gaston. Son ami Porc-Epic organise une fiesta de folie, et tous les animaux n'ont qu'une hâte... danser jusqu'au bout de la nuit ! Il est HORS DE QUESTION pour Gaston de mettre un pied sur la piste de danse. D'abord, il ne sait même pas comment bouger son corps. Et puis, qu'est-ce qu'ils ont tous à vouloir lui apprendre ? Pourquoi n'aurait-il pas droit de ne pas aimer ça ?",
                 13.90f, Categorie.BEBES, "", auteurs_names, "GastonGrognon.jfif", "Les Albums Casterman"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Jouannigot"}));
 
-        livresExpected.add(creerLivre("LA FAMILLE PASSIFLORE, PIROUETTE & NYMPHEAS", 9782356740878l,
+        livresExpected.add(creerLivre("La famille Passiflore, Pirouette & Nympheas", 9782356740878l,
                 "Au pays multicolore des nymphéas, vit la famille Blanche. La maman est une artiste peintre très connue. Ses deux enfants Ajonc et Genet veulent construire une cabane parmi les nymphéas, aidés par leurs jeunes invités : les Passiflore. 1987, premier livre pour enfants aux éditions Milan : Le Premier Bal d'Agaric Passiflore, texte de Geneviève Huriet. C'est le succès. Succès couronné par des prix littéraires et des récompenses diverses (prix Saint-Exupéry).\n" +
                         "S'ensuivra une longue série (24 titres parus), pour le plus grand plaisir des enfants (à partir de quatre ans). Aujourd'hui, les petits lapins Passiflore sont traduits en 28 langues et font l'objet d'une série télé, 52 épisodes de 26 minutes (production Euro Visual TF1) et diffusée depuis 2004 (TF1, Disney Chanel, etc.). En 2012, chez Dargaud, Loïc Jouannigot reprend seul les personnages des Passiflore en bande dessinée avec deux albums : L'Anniversaire de Dendelion et La Chorale.\n" +
                         "Suivent deux autres titres avec les textes de Michel Plessix, Mélodie potagère et La Chasse au trésor. Depuis l'arrêt en 2007 de l'édition, la sympathique et néanmoins célèbre Famille Passiflore est rééditée aux éditions Maghen. Ce nouvel album, Pirouette & Nymphéas, contient une histoire inédite de la famille Passiflore écrite et dessinée par Loïc Jouannigot.",
@@ -63,14 +63,14 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Jalbert"}));
 
-        livresExpected.add(creerLivre("LES GESTES BARRIERES EXPLIQUES AUX ENFANTS", 9782017866763l,
+        livresExpected.add(creerLivre("Les gestes barrières expliqués aux enfants", 9782017866763l,
                 "Un petit ouvrage documentaire à destination des enfants de l'école maternelle pour leur expliquer simplement les gestes barrières pour qu'ils puissent se protéger et protéger les autres du coronavirus et des virus en général. Un dessin animé conçu par l'auteur et adapté de ce livre est également disponible sur YouTube et a dépassé les 100 000 vues en à peine quelques jours.",
                 2.95f, Categorie.BEBES, "", auteurs_names, "LesGestesBariiere.jfif", "Deux Coqs d'Or"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Higgins"}));
 
-        livresExpected.add(creerLivre("MAMAN OURS A LA RESCOUSSE", 9782226454140l,
+        livresExpected.add(creerLivre("Maman Ours à la rescousse", 9782226454140l,
                 "Michel, l'ours grincheux, ne supporte pas ses voisins. Ils sont bruyants, envahissants, collants, et ils sont partout, tout le temps. Heureusement, son sale caractère lui assure une paix relative... jusqu'au jour où une énorme tempête se déclare. Tout le monde se réfugie alors chez Michel, qui doit même participer à une chaîne humaine géante pour sauver un petit lapin des bourrasques ! L'ours ronchon, horripilé par cette invasion, risque pourtant bien de changer d'avis : parfois, l'entraide appelle...\n" +
                         "l'entraide. À partir de 5 ans",
                 12.00f, Categorie.BEBES, "", auteurs_names, "MamanOursALaRescousse.jfif", "Albin Michel Jeunesse"
@@ -78,14 +78,14 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Séchan", "Jourdy"}));
 
-        livresExpected.add(creerLivre("CACHÉE OU PAS, J'ARRIVE - UNE AVENTURE SANS AVENTURE DE BARTOK BILOBA", 9782330130152l,
+        livresExpected.add(creerLivre("Cachée ou pas, j'arrive - Une aventure sans aventure de Bartok Biloba", 9782330130152l,
                 "Une partie de cache-cache écrite et dessinée à quatre mains. Lolita Séchan et Camille Jourdy s'amusent à faire jouer leur personnages respectifs dans l'univers de la famille Biloba. À partir de 4 ans.",
                 13.50f, Categorie.ENFANTS, "", auteurs_names, "cacheeOuPasJarrive.jfif", "Actes Sud BD"
 
         ));
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"NOB"}));
 
-        livresExpected.add(creerLivre("LA CANTOCHE, TOME 05 - EN AVANT, MACHE !", 9791036314919l,
+        livresExpected.add(creerLivre("La cantoche, Tome 05 - en avant, mâche !", 9791036314919l,
                 "La cloche a sonné, c'est l'heure du repas, direction... la cantoche ! Tous les enfants se retrouvent dans ce lieu mythique, qu'on connaît forcément de près ou de loin. Entre les batailles de nourriture, les disputes, les chutes et les réclamations auprès du cuisiner fan de légumes, la pause déjeuner peut rapidement se transformer... en catastrophe ! Toujours pas de héros récurrent mais les gags s'enchaînent autour de cet univers délicieux.\n" +
                         "L'auteur de \"Dad\" et de \"Mamette\" permet à chacun de retrouver, avec tendresse et parfois un brin de nostalgie, les mots d'enfants à la cantine, la philosophie de réfectoire et surtout les plats gastronomiques du cuistot !",
                 13.50f, Categorie.ENFANTS, "", auteurs_names, "cacheeOuPasJarrive.jfif", "BD Kids",
@@ -94,35 +94,35 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Jourdy", "Dunand-Pallaz"}));
 
-        livresExpected.add(creerLivre("LE CHAT RITABLE", 9782350670744l,
+        livresExpected.add(creerLivre("Le chat ritable", 9782350670744l,
                 "Il était une fois un petit chat bienveillant, qui toujours secourait les pauvres et les mendiants. Le coeur sur la patte, généreux et fort aimable, ce chat exceptionnel, c'était le chat Ritable.",
                 8.50f, Categorie.ENFANTS, "", auteurs_names, "LeChatRitable.jfif", "Balivernes Éditions"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Jolibois", "Heinrich"}));
 
-        livresExpected.add(creerLivre("LES P'TITES POULES - ALBUM COLLECTOR (TOMES 1 A 4) - VOL01", 9782266177054l,
+        livresExpected.add(creerLivre("Les p'tites poules - Album Collector (Tomes 1 à 4) - Vol01", 9782266177054l,
                 "Connaissez-vous Carmen, la petite poulette qui en a sous la crête ? Son frère Carmélito, le téméraire petit poulet rose ? Leurs copains Coquenpâte, Coqsix, Molédecoq, Hucocotte et les autres agités du poulailler ? Voyages, humour, émotion, frisson et fantaisie... Voilà ce que vous trouverez dans le collector des quatre premières aventures des P'tites Poules.",
                 15.10f, Categorie.ENFANTS, "", auteurs_names, "LesPtitesPoules.jfif", "PKJ"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Cathon"}));
 
-        livresExpected.add(creerLivre("MIMOSE ET SAM, TOME 01 - BASILIC EN PANIQUE ! - HISTOIRE COMPLETE", 9791036310119l,
+        livresExpected.add(creerLivre("Mimose et Sam, Tome 01 - Basilic en panique ! - Histoire complète", 9791036310119l,
                 "\"Où étiez-vous la nuit dernière ?\"  Mimose et Sam ont lancé leur enquête. Ils veulent découvrir qui a grignoté les feuilles de leur ami Basile. Aucun des insectes interrogés n'admet être le coupable. Les deux amis doivent trouver des moyens pour le démasquer. Mais cela est plus facile à dire qu'à faire ! Il faudra user de beaucoup d'ingéniosité.",
                 7.95f, Categorie.ENFANTS, "", auteurs_names, "MimoseEtSam.jfif", "Mini BD KIDS"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Bertrand", "Bonniol"}));
 
-        livresExpected.add(creerLivre("LA VENGEANCE DE CORNEBIDOUILLE", 9782211203166l,
+        livresExpected.add(creerLivre("La vengeance de Cornebidouille", 9782211203166l,
                 "Ses parents l’ont envoyé au lit pour avoir renâclé devant sa soupe de légumes. Mais Pierre est décidé à ruser et à trouver un moyen imparable pour éliminer non seulement Cornebidouille, la sorcière coincée dans les cabinets, mais aussi l’horrible potage de sa propre mère !",
                 12.70f, Categorie.ENFANTS, "", auteurs_names, "VengeanceCornebidouille.jfif", "JSP"
         ));
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Pedrosa"}));
 
-        livresExpected.add(creerLivre("L'AGE D'OR - TOME 2",
+        livresExpected.add(creerLivre("L'âge d'or - Tome 2",
                 9791034732647l,
                 "Avec l'hiver, la guerre a commencé. Tandis que les insurgés rassemblent leurs troupes et remontent depuis la Péninsule, la princesse Tilda assiège le château de son frère pour reconquérir son trône. En haut des remparts, en première ligne, les \"gueux\" se préparent à l'assaut.Ce deuxième tome conclut en majesté l'épopée flamboyante de \" L'Age d'or \", ce livre assez puissant pour déchaîner la tempête et la révolution, la force d'une utopie qui donne envie de croire en l'avenir.",
                 32.00f, Categorie.ROMANS_ADULTES, "", auteurs_names, "AgeDOr.jfif", "Aire Libre"
@@ -130,7 +130,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Rochette", "Bocquet"}));
 
-        livresExpected.add(creerLivre("AILEFROIDE - ALTITUDE 3954",
+        livresExpected.add(creerLivre("AileFroide - Altitude 3954",
                 9782203121935l,
                 "De Grenoble à la Bérarde en mobylette. Des rappels tirés sur la façade du Lycée Champollion. Avec l'exaltation pure qui tape aux tempes, quand on bivouaque suspendu sous le ciel criblé d'étoiles, où qu'à seize ans à peine on se lance dans des grandes voies. La Dibona, le pilier Frendo, le Coup de Sabre, la Pierre Alain à la Meije, la Rébuffat au Pavé : le Massif des Ecrins tout entier offert comme une terre d'aventure, un royaume, un champ de bataille parfois.\n" +
                         "Car la montagne réclame aussi son dû et la mort rôde dans les couloirs glacés.",
@@ -139,7 +139,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Deveney", "Tamarit"}));
 
-        livresExpected.add(creerLivre("GEANTE - ONE-SHOT - GEANTE - HISTOIRE DE CELLE QUI PARCOURUT LE MONDE A LA RECHERCHE DE LA LIBERTE",
+        livresExpected.add(creerLivre("Géante - One-shot - Géante - Histoire de celle qui parcourut le monde à la recherche de la liberté",
                 9782413000167l,
                 "Elle était une fois Céleste, géante véritable, orpheline recueillie au coeur de la montagne, petite dernière d'une famille de six frères. Et quand vient le temps où chacun s'envole du cocon familial, Céleste veut elle aussi arpenter de nouveaux horizons. De la Vallée aux Marais en passant par Dorsodoro, elle découvrira l'hostilité créée par la différence, les injustices de la guerre ou de la religion mais aussi l'amour et pourquoi pas, au bout du chemin, la liberté d'être elle-même ?",
                 27.95f, Categorie.ROMANS_ADULTES, "", auteurs_names, "Geante.jfif", "Editions Delcourt"
@@ -147,7 +147,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Lambda"}));
 
-        livresExpected.add(creerLivre("LE MONDE AU BALCON - CARNET DESSINE D'UN PRINTEMPS CONFINE",
+        livresExpected.add(creerLivre("Le monde AU balcon - Carnet dessiné d'un printemps confiné",
                 9782226455789l,
                 "J'ai commencé ce carnet en janvier 2020, je voulais dessiner mon quotidien avec légèreté, sans objectif précis... Qui aurait pu prévoir que ce petit projet insouciant allait se changer en journal de bord de l'événement mondial le plus inédit du 21e siècle ? Dessinatrice vedette d'instagram, Sophie Lambda est l'autrice de la remarquable bd tant pis pour l'amour, parue en 2019. Dans le monde au balcon, elle donne aux petites histoires personnelles et grandes réalités collectives un coup de crayon libérateur.",
                 18.90f, Categorie.ROMANS_ADULTES, "", auteurs_names, "LeMondeAuBalcon.jfif", "Albin Michel"
@@ -155,7 +155,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Cy"}));
 
-        livresExpected.add(creerLivre("RADIUM GIRLS",
+        livresExpected.add(creerLivre("Radium Girls",
                 9782344033449l,
                 "\"Des destins de femmes sacrifiées sur l’autel du progrès.\n" +
                         "\n" +
@@ -168,7 +168,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Gaiman", "Neyret"}));
 
-        livresExpected.add(creerLivre("CORALINE (ED 2020 ILLUSTRE) - EDITION LUXE ILLUSTREE",
+        livresExpected.add(creerLivre("Coraline (Ed 2020 illustré) - Edition luxe illustrée",
                 9782226453587l,
                 "Coraline vient d'emménager dans une étrange maison et, comme ses parents n'ont pas le temps de s'occuper d'elle, elle décide de jouer les exploratrices. Ouvrant une porte condamnée, elle pénètre dans un appartement identique au sien. Identique, et pourtant... Dans la droite ligne d'Alice au pays des merveilles, ce roman à l'atmosphère inoubliable a déjà conquis des millions de lecteurs. A partir de 13 ans",
                 19.90f, Categorie.ADOS, "", auteurs_names, "Coraline.jfif", "Albin Michel"
@@ -177,7 +177,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Rowling"}));
 
-        livresExpected.add(creerLivre("L'ICKABOG",
+        livresExpected.add(creerLivre("L'Ickabog",
                 9782075150552l,
                 "Haut comme deux chevaux. Des boules de feu étincelantes à la place des yeux. De longues griffes acérées telles des lames. L'Ickabog arrive...La Cornucopia était un petit royaume heureux. On n'y manquait de rien, le roi portait la plus élégante des moustaches, et le pays était célèbre pour ses mets délicieux : Délice-des-Ducs ou Nacelles-de-Fées, nul ne pouvait goûter ses gâteaux divins sans pleurer de joie ! Mais dans tout le royaume, un monstre rôde : selon la légende, l'Ickabog habitait les Marécages brumeux et froids du nord du pays. On disait de cette créature qu'elle avait de formidables pouvoirs et sortait la nuit pour dévorer les moutons comme les enfants. Des histoires pour les petits et les naïfs ? Parfois, les mythes prennent vie de façon étonnante...Alors, si vous êtes courageux et voulez connaître la vérité, ouvrez ce livre, suivez deux jeunes héros déterminés et perspicaces dans une folle aventure qui changera pour toujours le sort de la Cornucopia.",
                 20.00f, Categorie.ADOS, "", auteurs_names, "Ickabog.jfif", "Gallimard Jeunesse",
@@ -188,7 +188,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Wynne Jones"}));
 
-        livresExpected.add(creerLivre("LE CHATEAU DE HURLE",
+        livresExpected.add(creerLivre("Le château de Hurle",
                 9782376971290l,
                 "La trilogie arrive enfin dans son intégralité en France ! Découvrez le roman qui a inspiré le chef d'oeuvre acclamé de Miyazaki, Le Château ambulant ? ! Au coeur de la contrée magique d'Ingarie, la jeune Sophie s'est résignée à un avenir morne dans sa petite chapellerie de quartier. Mais lorsqu'elle a le malheur d'offusquer la sorcière des Steppes, celle-ci lui dérobe 60 ans de sa vie, la laissant vieille et démunie.\n" +
                         "Cherchant désespérément un moyen de briser le sortilège, Sophie rejoindra alors l'équipe haute en couleur du grand mage Hurle. C'est au sein de son mystérieux château ambulant qu'elle se retrouvera à pactiser avec le malicieux démon de feu Calcifer. C'est une aventure extraordinaire à la recherche de sa jeunesse volée qui commence alors pour Sophie, prête à reprendre en main son destin... Autrice acclamée de littérature fantastique, Diana Wynne Jones (1934-2011) a remporté de nombreux prix, dont le Guardian Award for Children's Fiction et deux Mythopoeic Fantasy Awards.\n" +
@@ -198,7 +198,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Wynne Jones"}));
 
-        livresExpected.add(creerLivre("LA TRILOGIE DE HURLE - T02 - LE CHATEAU DES NUAGES, LA TRILOGIE DE HURLE 2",
+        livresExpected.add(creerLivre("La trilogie de Hurle - T02 - Le château des nuages, La trilogie de Hurle 2",
                 9782376971757l,
                 "La suite tant attendue du Château de Hurle vous emmène cette fois au sud d'Ingarie, dans les mondes imaginaires des Mille et une nuits ! Loin du pays d'Ingarie, dans le sultanat du Rajpout, un jeune marchand se plaît à rêver à une vie différente. Il s'imagine ainsi fils de roi, promis depuis sa naissance à une belle princesse, bien loin de sa vie miséreuse et de son père Ingrat, bien loin de son petit étal de tapis.\n" +
                         "Lorsqu'un beau jour, un étranger lui vend un tapis volant, la vie d'Abdallah prend un tournant pour le moins inattendu. Les péripéties s'enchaînent et le destin de notre héros semble soudain lié à celui de la superbe princesse Fleur-dans-la-Nuit. Pour la retrouver, il part pour une incroyable odyssée, semée de djinns légendaires, de sorciers, de prophéties anciennes... et d'un mystérieux château dans les nuages.",
@@ -207,7 +207,7 @@ public class LivreContentInitialiser {
 
         auteurs_names = new ArrayList<>(Arrays.asList(new String[]{"Sfar"}));
 
-        livresExpected.add(creerLivre("PETIT VAMPIRE",
+        livresExpected.add(creerLivre("Petit Vampire",
                 9782211311021l,
                 "Tout a commencé par un film d'horreur. « Ce n'est pas de ton âge, Michel », m'avait pourtant prévenu Petit Vampire. Mais on est quand même allés voir Le Commando des morts vivants. Les zombies nazis étaient effrayants, mais comme c'était du cinéma, ça allait. Le problème, c'est que ces affreux sont revenus le soir, dans mon rêve. J'ai inventé une porte et ils sont partis, ouf ! Sauf que je ne savais pas où menait cette porte. Et puis Marguerite est arrivé pour me dire de venir vite, parce que d'horribles zombies avaient débarqué chez Petit Vampire...",
                 14.95f, Categorie.ADOS, "", auteurs_names, "leChateauDesNuages.jfif", "Delcourt",
