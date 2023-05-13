@@ -9,11 +9,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 @ConfigurationProperties(prefix = "application.jwt")
-@NoArgsConstructor @Getter //@Setter
+@NoArgsConstructor @Getter @Setter
 public class JwtConfig {
     private String secretKey;
     private String tokenPrefix;
-    @Setter
     private Integer tokenExpirationAfterHours;
 
     public String getAuthorisationHeader(){
