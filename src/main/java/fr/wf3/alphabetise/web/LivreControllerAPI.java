@@ -27,10 +27,11 @@ public class LivreControllerAPI {
     @GetMapping("/books/{id}")
     public ResponseEntity<Object> findLivreById(@PathVariable Long id) {
         LivreDTO livre = livreService.getBookById(id);
-        if  (livre != null){
+        if(livre != null){
             return new ResponseEntity<>(livre, HttpStatus.OK);
         } else {
             return new ResponseEntity<>("Pas de livre avec l'ISBN " + id, HttpStatus.NOT_FOUND);
         }
     }
+
 }

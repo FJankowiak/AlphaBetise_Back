@@ -69,8 +69,11 @@ public class SecurityConfiguration /*extends WebSecurityConfigurerAdapter */ {
                     //                cors.addAllowedOrigin("http://localhost:4200);
                     return cors;
 
-                }).and().authorizeRequests().antMatchers("/livres/books**").permitAll()
+                })
+//                .and().authorizeRequests().antMatchers("/livres/books**").permitAll()
+//                .and().authorizeRequests().antMatchers("/login").permitAll()
 //                .and().authorizeRequests().anyRequest().authenticated()
+                .and().authorizeRequests().anyRequest().permitAll()
         ;
         // Provoquer une erreur 401 quand on est pas authentifié
         http.exceptionHandling().authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));

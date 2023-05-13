@@ -28,29 +28,29 @@ public class ImageContentInitialiser {
 //
 //        // Peupler la liste attendue
 ////        Editeur e1 = new Editeur("Bayard");
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\AgeDOr.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\ailefroide.jpg"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\cacheeOuPasJarrive.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\Coraline.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\etonnanteFamilleAppenzel.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\GastonGrognon.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\Geante.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\Ickabog.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\la-cantoche.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LaFamillePassiflore.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LaNuitDeBerk.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\leChateauDesNuages.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\leChateauHurle.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LeChatRitable.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LeMondeAuBalcon.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LesGestesBariiere.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LesPierresAFeu.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\LesPtitesPoules.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\MamanOursALaRescousse.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\MimoseEtSam.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\PetitVampire.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\radiumGirls.jfif"));
-        imagesExpected.add(new Image("src\\assets\\images\\livres\\VengeanceCornebidouille.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/AgeDOr.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/ailefroide.jpg"));
+        imagesExpected.add(new Image("assets/images/livres/cacheeOuPasJarrive.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/Coraline.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/etonnanteFamilleAppenzel.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/GastonGrognon.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/Geante.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/Ickabog.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/la-cantoche.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LaFamillePassiflore.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LaNuitDeBerk.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/leChateauDesNuages.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/leChateauHurle.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LeChatRitable.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LeMondeAuBalcon.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LesGestesBariiere.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LesPierresAFeu.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/LesPtitesPoules.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/MamanOursALaRescousse.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/MimoseEtSam.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/PetitVampire.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/radiumGirls.jfif"));
+        imagesExpected.add(new Image("assets/images/livres/VengeanceCornebidouille.jfif"));
 
 ////        imagesExpected.add();
 //

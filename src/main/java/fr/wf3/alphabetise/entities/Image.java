@@ -32,7 +32,7 @@ public class Image {
 
 
     public String getImgUrl() {
-        return "src\\assets\\images\\livres\\" + imgUrl;
+        return "assets/images/livres/" + imgUrl;
     }
 
     @JsonIgnore

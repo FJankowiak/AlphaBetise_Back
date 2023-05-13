@@ -38,7 +38,7 @@ public class LivreServiceImpl implements LivreService {
 
     @Override
     public LivreDTO getBookById(Long codeEAN) {
-        return null;
+        return livreRepository.findByCodeEAN(codeEAN);
     }
 
     @Override

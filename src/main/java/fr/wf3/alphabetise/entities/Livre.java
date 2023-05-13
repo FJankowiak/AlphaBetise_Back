@@ -66,7 +66,7 @@ public class Livre {
 
 
     public String setImgUrl(String url) {
-        return "src\\assets\\images\\livres\\" + url;
+        return "assets/images/livres/" + url;
     }
 
 
