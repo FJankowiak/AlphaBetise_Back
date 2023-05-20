@@ -1,8 +1,7 @@
 package fr.wf3.alphabetise.config;
 
-import fr.wf3.alphabetise.entities.User;
 import fr.wf3.alphabetise.security.MyUserDetails;
-import fr.wf3.alphabetise.services.UserAuthentificationService;
+import fr.wf3.alphabetise.services.UserAuthenticationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,7 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class CustomAuthenticationManager implements AuthenticationManager {
-    private final UserAuthentificationService userAuthentificationService;
+    private final UserAuthenticationService userAuthenticationService;
 
     @Bean
     public PasswordEncoder getPasswordEncoder() {
@@ -28,7 +27,7 @@ public class CustomAuthenticationManager implements AuthenticationManager {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        MyUserDetails user = userAuthentificationService.loadUserByUsername(authentication.getName());
+        MyUserDetails user = userAuthenticationService.loadUserByUsername(authentication.getName());
         String pwd = authentication.getCredentials().toString();
         if(!getPasswordEncoder().matches(pwd, user.getPassword())) {
 //            System.err.println(pwd);

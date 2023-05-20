@@ -2,7 +2,7 @@ package fr.wf3.alphabetise.config.jwt;
 
 import com.google.common.base.Strings;
 import fr.wf3.alphabetise.security.MyUserDetails;
-import fr.wf3.alphabetise.services.UserAuthentificationService;
+import fr.wf3.alphabetise.services.UserAuthenticationService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.JwtException;
@@ -31,7 +31,7 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
 
     // On s'épargne de mettre celui là dans le constructeur
     @Autowired
-    private UserAuthentificationService userAuthentificationService;
+    private UserAuthenticationService userAuthenticationService;
 
     public JwtTokenVerifier(SecretKey secretKey, JwtConfig jwtConfig) {
         this.secretKey = secretKey;
@@ -65,7 +65,7 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
 
             String username = body.getSubject();
 
-            MyUserDetails user = userAuthentificationService.loadUserByUsername(body.getSubject());
+            MyUserDetails user = userAuthenticationService.loadUserByUsername(body.getSubject());
 
 //            Set<SimpleGrantedAuthority> simpleGrantedAuthorities = App
             List<Map<String, String>> authorities = (List<Map<String,String>>) body.get("authorities");
