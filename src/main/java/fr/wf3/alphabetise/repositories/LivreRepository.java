@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface LivreRepository extends JpaRepository<Livre, Long> {
 
-    LivreDTO findByCodeEAN(Long codeEAN);
+    Livre findByCodeEAN(Long codeEAN);
 }

@@ -38,7 +38,13 @@ public class LivreServiceImpl implements LivreService {
 
     @Override
     public LivreDTO getBookById(Long codeEAN) {
-        return livreRepository.findByCodeEAN(codeEAN);
+        Livre livre = livreRepository.findByCodeEAN(codeEAN);
+
+        if(livre == null){
+            return null;
+        } else {
+            return MapperDto.fromBook(livre);
+        }
     }
 
     @Override

@@ -29,8 +29,11 @@ public class CustomAuthenticationManager implements AuthenticationManager {
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         MyUserDetails user = userAuthentificationService.loadUserByUsername(authentication.getName());
-        String pwd = getPasswordEncoder().encode(authentication.getCredentials().toString());
+        String pwd = authentication.getCredentials().toString();
         if(!getPasswordEncoder().matches(pwd, user.getPassword())) {
+//            System.err.println(pwd);
+//            System.err.println(user.getPassword());
+//            System.err.println(getPasswordEncoder().matches(pwd, user.getPassword()));
             throw new BadCredentialsException("Wrong login/password");
         }
         return new UsernamePasswordAuthenticationToken(user, user.getPassword());
