@@ -4,6 +4,7 @@ import fr.wf3.alphabetise.dtos.LivreDTO;
 import fr.wf3.alphabetise.entities.Livre;
 import fr.wf3.alphabetise.mappers.LivreMapperImpl;
 import fr.wf3.alphabetise.repositories.LivreRepository;
+import fr.wf3.alphabetise.exceptions.BookNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
