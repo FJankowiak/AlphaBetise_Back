@@ -5,6 +5,7 @@ import fr.wf3.alphabetise.entities.Livre;
 import fr.wf3.alphabetise.mappers.LivreMapperImpl;
 import fr.wf3.alphabetise.repositories.LivreRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,21 +15,22 @@ import java.util.stream.Collectors;
 @Service
 @Transactional
 @AllArgsConstructor
+@Slf4j
 public class LivreServiceImpl implements LivreService {
     private  LivreRepository livreRepository;
-    private LivreMapperImpl MapperDto;
+    private LivreMapperImpl mapperDto;
 
 
     @Override
     public List<LivreDTO> booksList() {
         List<Livre> livres = livreRepository.findAll();
         List<LivreDTO> livreDTOS = livres.stream()
-                .map(livre -> MapperDto.fromBook(livre))
+                .map(livre -> mapperDto.fromBook(livre))
                 .collect(Collectors.toList());
         /*
         List<LivreDTO> livreDTOS=new ArrayList<>();
         for (Livre livre:livres){
-            LivreDTO livreDTO=dtoMapper.fromBook(livre);
+            LivreDTO livreDTO=MapperDto.fromBook(livre);
             livreDTOS.add(livreDTO);
         }
         *
@@ -37,31 +39,32 @@ public class LivreServiceImpl implements LivreService {
     }
 
     @Override
-    public LivreDTO getBookById(Long codeEAN) {
-        Livre livre = livreRepository.findByCodeEAN(codeEAN);
+    public LivreDTO getBookById(Long codeEAN) throws BookNotFoundException {
+        Livre livre = livreRepository.findById(codeEAN)
+                .orElseThrow(() -> new BookNotFoundException("Book Not found"));
+        return mapperDto.fromBook(livre);
 
-        if(livre == null){
-            return null;
-        } else {
-            return MapperDto.fromBook(livre);
-        }
     }
 
     @Override
     public LivreDTO addNewBook(LivreDTO livreDTO) {
-        return null;
+        Livre livre=mapperDto.fromBookDTO(livreDTO);
+        Livre ajoutLivre= livreRepository.save(livre);
+        return mapperDto.fromBook(ajoutLivre);
     }
 
 
 
     @Override
     public void deleteBook(Long codeEAN) {
-
+        livreRepository.deleteById(codeEAN);
     }
 
     @Override
     public LivreDTO updateBook(LivreDTO livreDTO) {
-        return null;
+        Livre livre=mapperDto.fromBookDTO(livreDTO);
+        Livre modifLivre = livreRepository.save(livre);
+        return mapperDto.fromBook(modifLivre);
     }
 
     @Override
