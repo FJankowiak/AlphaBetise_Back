@@ -6,6 +6,7 @@ import fr.wf3.alphabetise.services.IAuteurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
@@ -36,6 +37,7 @@ public class AuteurController {
     }
 
     @PostMapping("/auteurs")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Object> addAuteur(@RequestBody Auteur auteur) {
        try {
            Auteur _auteur = auteurService.addAuteur(new Auteur (auteur.getPrenom(), auteur.getNom(),auteur.getPseudonyme(), auteur.getDateNaissance() ));
@@ -46,6 +48,7 @@ public class AuteurController {
     }
 
     @PutMapping(value = "/auteurs/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Auteur> updateAuteur(@PathVariable("id") Long id, @RequestBody Auteur auteur) {
         Optional<Auteur> auteurData = auteurService.findAuteurById(id);
         if (auteurData.isPresent()) {
@@ -61,6 +64,7 @@ public class AuteurController {
     }
 
     @DeleteMapping("/auteurs/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<HttpStatus> deleteAuteur(@PathVariable("id") Long id) {
         Optional<Auteur> auteur = auteurService.findAuteurById(id);
         if (auteur.isPresent()) {

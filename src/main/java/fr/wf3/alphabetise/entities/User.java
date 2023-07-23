@@ -19,9 +19,12 @@ public class User {
     @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
+    @JsonIgnore
     private Long id;
     private String nom;
     private String prenom;
+
+    @Column(nullable = false, unique = true)
     private String email;
     @JsonIgnore
     private String password;

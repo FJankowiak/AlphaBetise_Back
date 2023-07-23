@@ -22,6 +22,8 @@ public class UserAuthenticationService implements UserDetailsService {
                 );
     }
 
+
+    // Implémenter UserDetailsService m'a amené à surcharger cette méthode pour créer celle que Spring Security attend
     @Override
     @Transactional(readOnly = true)
     public MyUserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
